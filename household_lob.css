@@ -1,0 +1,272 @@
+
+input[type=radio], input[type=checkbox] {
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    margin: 4px 0 0;
+    line-height: normal;
+}
+
+.radio_button_option span {
+    display: inline-block;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border: solid 1px #D6D9DD;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+}
+
+.radio_button_option {
+		border-width: 1px;
+    border-color: #000 #000 #d6d9dd;
+    border-bottom-style: solid;
+    overflow: hidden;
+}
+
+.radio_button_option label {
+    min-height: 40px;
+    padding: 11px 16px;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.radio_button_option span:after {
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 8px;
+    height: 8px;
+    content: "";
+    border-radius: 50%;
+    background-color: #FFFFFF;
+}
+
+input[type=radio]:checked + span:after {
+    background-color: #2249B1;
+    border-color: #2249B1;
+}
+
+.radio_button_option label:has(> input:checked) {
+    background-color: #F3F3F3;
+}
+
+.radio_button_text {
+    display: inline-block;
+    width: 100%;
+    vertical-align: text-top;
+    padding-left: 4px;
+    padding-right: 23px;
+    margin-left: 23px;
+    word-break: break-word;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+.radio_button_option:first-of-type {
+    border-radius: 3px 3px 0 0;
+}
+
+.radio_button_option:last-of-type {
+    border-bottom: none;
+    border-radius: 0 0 3px 3px;
+}
+
+.input_with_prefix:after {
+	content: "£";
+  display: block;
+  background-color: grey;
+  width: 44px;
+  height: 44px;
+}
+
+#sticky-header {
+	position: fixed;
+	top: 0;
+  left: 66.25%;
+	width: auto;
+	z-index: 1000;
+	padding: 85px 0 0;
+	font-size: 24px;
+	font-weight: 700;
+  writing-mode: vertical-lr;
+  opacity: .35;
+}
+
+.jumper_menu_button.active {
+	background-color: #2249b1;
+  border-color: #2249b1;
+  color: #fff;
+}
+
+.hidden_list {
+	display:none;
+}
+
+.progress {
+	display:none;
+}
+
+.progress::after {
+    content:'70%';
+    color:#fff;
+    display: block;
+    text-align: right;
+    font-size: 10px;
+    margin-right: 8px;
+}
+
+
+.dev_options {
+	opacity: 0;
+  transition: all .1s; 
+}
+
+.dev_options_launch {
+	transition: all .1s; 
+}
+
+.show_dev_options {
+	inset: 32px auto auto 32px;
+  opacity: 1;
+}
+
+.question_wrapper[data-qset-type="new"] {
+  /* transition: all .05s ease; */
+  /* background-color: #b4c8ff; */
+  /* height: 0; */
+  /* opacity: 0; */
+  /* margin: 0; */
+  background-color: transparent;
+  height: auto;
+  margin-top: 24px;
+  opacity: 1;
+}
+.question_wrapper.show_new_question {
+  background-color: transparent;
+  height: auto;
+  margin-top: 24px;
+  opacity: 1;
+}
+
+.dev_options_launch {
+	display: none;
+}
+
+#dev_options_button_02 {
+	display:none;
+}
+#dev_options_button_hide {
+  padding-bottom: 8px;
+}
+
+#disabled_gender label {
+    cursor: not-allowed;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+
+.blade_overlay {
+    z-index: 1001;
+    display: none;
+}
+.blade_flyout {
+    z-index: 1002;
+    display: flex;
+    right: -575px;
+}
+.blade_content .question_wrapper {
+    flex-direction: column;
+}
+.blade_content .question_label {
+    flex: 1;
+    max-width: 100%;
+    padding-left: 0;
+}
+.blade_content .label_div {
+    justify-content: flex-start;
+}
+.blade_content .label_text {
+    text-align: left;
+    padding-left: 0;
+}
+
+.blade_content .question_response {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.blade_flyout .action_button_wrapper .question_response {
+    justify-content: flex-end;
+    align-items: flex-end;  
+}
+
+.page_button[style_override="confirm"] {
+    background: #2249b1;
+}
+
+.page_button[style_override="confirm"] .page_button_text {
+    color: #fff
+}
+
+#other,
+#residency,
+#pt_occupation,
+#iva_ccj,
+#bankrupt,
+#add_proposers,
+#convictions,
+#flat_extra,
+#above_comm,
+#rem_acc,
+#cracks,
+#landslip,
+#trees,
+#self_cont,
+#bus_name,
+#bus_details,
+#bus_prem_type,
+#client_visits,
+#eqip_on_prem,
+#eqip_covered,
+#stock_on_prem,
+#wall_constr,
+#wall_constr_other,
+#boiler_types,
+#flat_roof,
+#felt_roof,
+#arch_int,
+#extension_details,
+#roof_constr,
+#roof_constr_other,
+#let_occupancy,
+#bedsits,
+#trace_access,
+#unoccupied,
+#lodgers,
+#unoccupancy_pending,
+#cover_refused,
+#terms_appl,
+#extra_prec,
+#co_convicted,
+#contents_cover,
+#xs_waiver,
+#open_cover,
+#household_ncd,
+#spec_items,
+#spec_items_home,
+#cycles,
+#prev_ins,
+#credit_card,
+#money_cover,
+#freezer,
+#outbuildings_theft,
+#external_lock,
+#window_lock,
+#maintenance_contract,
+#smoke_detectors,
+#safe {
+	display: none;
+}
+
