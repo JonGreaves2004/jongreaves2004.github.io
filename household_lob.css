@@ -266,7 +266,8 @@ input[type=radio]:checked + span:after {
 #window_lock,
 #maintenance_contract,
 #smoke_detectors,
-#safe {
+#safe,
+#business_details {
 	display: none;
 }
 
