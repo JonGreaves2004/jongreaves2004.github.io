@@ -69,14 +69,18 @@ $(document).ready(function () {
       console.log('Private Individual selected');
       $('#priv_ind').css('display','block');
       $('#other').css('display','none');
+      $('#personal_details').css('display','block');
+      $('#business_details').css('display','none');	 
     });
     $('#private_or_other #2').click(function() {
       console.log('Other selected');
       $('#other').css('display','block');
       $('#priv_ind').css('display','none');
+      $('#personal_details').css('display','none');
+      $('#business_details').css('display','block');
     });
     
-		$('#disabled_gender #3').attr('checked',true);
+	$('#disabled_gender #3').attr('checked',true);
     
     
     // Hide/show UK Residency responses
