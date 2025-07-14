@@ -1,5 +1,3 @@
-<script>
-
 $(document).ready(function () {
     var currentHeading = null;
 
@@ -614,6 +612,3 @@ $(document).ready(function () {
   
 });
 
-
-
-</script>
