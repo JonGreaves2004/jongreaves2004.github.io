@@ -70,7 +70,11 @@ $(document).ready(function () {
       $('#priv_ind').css('display','block');
       $('#other').css('display','none');
       $('#personal_details').css('display','block');
-      $('#business_details').css('display','none');	 
+      $('#business_details').css('display','none');
+      $('#jump_button_02').css('display','block');
+      $('#jump_button_02a').css('display','none');	    
+
+	    
     });
     $('#private_or_other #2').click(function() {
       console.log('Other selected');
@@ -78,6 +82,8 @@ $(document).ready(function () {
       $('#priv_ind').css('display','none');
       $('#personal_details').css('display','none');
       $('#business_details').css('display','block');
+	$('#jump_button_02a').css('display','block');
+      $('#jump_button_02').css('display','none');
     });
     
 	$('#disabled_gender #3').attr('checked',true);
