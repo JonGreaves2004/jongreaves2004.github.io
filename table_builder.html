@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blade Table Form</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .blade_table { display: none; margin-top: 20px; width: 100%; font-family: sans-serif; }
+    .blade_table_row { display: flex; border-bottom: 1px solid #ccc; padding: 8px 0; }
+    .blade_table_cell { flex: 1; padding: 4px 8px; }
+    .blade_table_col_01 { flex: 2; }
+    .blade_table_col_02 { flex: 1; }
+    .blade_table_col_03 { flex: 1; }
+    .blade_table_col_04 { flex: 1; }
+    .blade_table_col_05 { flex: 1; }
+    .action-btn { margin-right: 5px; cursor: pointer; color: blue; text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <form id="infoForm">
+    <label>Telephone Number: <input type="text" id="telephone" required></label><br><br>
+
+    <label>Number Type:
+      <select id="numberType" required>
+        <option value="">Select...</option>
+        <option value="Work">Work</option>
+        <option value="Mobile">Mobile</option>
+        <option value="Home">Home</option>
+        <option value="Fax">Fax</option>
+        <option value="Other">Other</option>
+      </select>
+    </label><br><br>
+
+    <label>Extension: <input type="text" id="extension"></label><br><br>
+
+    <label>Ex Directory:</label>
+    <label><input type="radio" name="exDirectory" value="Yes"> Yes</label>
+    <label><input type="radio" name="exDirectory" value="No"> No</label><br><br>
+
+    <button type="submit" id="submitBtn">Add</button>
+    <button type="button" id="cancelEdit" style="display:none;">Cancel</button>
+  </form>
+
+  <div class="blade_table" id="infoTable">
+    <div class="blade_table_row">
+      <div class="blade_table_cell blade_table_col_01"><strong>Telephone</strong></div>
+      <div class="blade_table_cell blade_table_col_02"><strong>Type</strong></div>
+      <div class="blade_table_cell blade_table_col_03"><strong>Extension</strong></div>
+      <div class="blade_table_cell blade_table_col_04"><strong>Ex Directory</strong></div>
+      <div class="blade_table_cell blade_table_col_05"><strong>Actions</strong></div>
+    </div>
+  </div>
+
+  <script>
+    $(function () {
+      let editingRow = null;
+
+      function resetForm() {
+        $('#infoForm')[0].reset();
+        editingRow = null;
+        $('#submitBtn').text('Add');
+        $('#cancelEdit').hide();
+      }
+
+      function createRow(telephone, type, extension, exDirectory) {
+        return $(`
+          <div class="blade_table_row">
+            <div class="blade_table_cell blade_table_col_01">${telephone}</div>
+            <div class="blade_table_cell blade_table_col_02">${type}</div>
+            <div class="blade_table_cell blade_table_col_03">${extension}</div>
+            <div class="blade_table_cell blade_table_col_04">${exDirectory}</div>
+            <div class="blade_table_cell blade_table_col_05">
+              <span class="action-btn editBtn">Edit</span>
+              <span class="action-btn deleteBtn">Delete</span>
+            </div>
+          </div>
+        `);
+      }
+
+      $('#infoForm').on('submit', function (e) {
+        e.preventDefault();
+
+        const telephone = $('#telephone').val().trim();
+        const numberType = $('#numberType').val();
+        const extension = $('#extension').val().trim();
+        const exDirectory = $('input[name="exDirectory"]:checked').val() || '';
+
+        if (!telephone || !numberType) {
+          return alert('Telephone Number and Number Type are required.');
+        }
+
+        const newRow = createRow(telephone, numberType, extension, exDirectory);
+
+        if (editingRow) {
+          editingRow.replaceWith(newRow);
+        } else {
+          $('#infoTable').append(newRow);
+          $('#infoTable').show();
+        }
+
+        resetForm();
+      });
+
+      $('#cancelEdit').on('click', resetForm);
+
+      $('#infoTable').on('click', '.editBtn', function () {
+        editingRow = $(this).closest('.blade_table_row');
+        const cells = editingRow.find('.blade_table_cell');
+
+        $('#telephone').val(cells.eq(0).text());
+        $('#numberType').val(cells.eq(1).text());
+        $('#extension').val(cells.eq(2).text());
+        const exDirVal = cells.eq(3).text();
+        if (exDirVal) {
+          $(`input[name="exDirectory"][value="${exDirVal}"]`).prop('checked', true);
+        } else {
+          $('input[name="exDirectory"]').prop('checked', false);
+        }
+
+        $('#submitBtn').text('Update');
+        $('#cancelEdit').show();
+      });
+
+      $('#infoTable').on('click', '.deleteBtn', function () {
+        const row = $(this).closest('.blade_table_row');
+        row.remove();
+
+        if ($('#infoTable .blade_table_row').length === 1) {
+          $('#infoTable').hide();
+        }
+
+        if (editingRow && editingRow.is(row)) {
+          resetForm();
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
