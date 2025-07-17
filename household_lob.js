@@ -646,9 +646,12 @@ $(document).ready(function () {
   }
 
     linkFieldPairs([
-      { source: 'source1', target: 'target1' },
-      { source: 'source2', target: 'target2' },
-      { source: 'source3', target: 'target3' }
+      { source: 'title_options_response_a', target: 'title_options_response_b' },
+      { source: 'forename_a', target: 'forename_b' },
+      { source: 'surname_a', target: 'surname_b' },
+      { source: 'dob_dd_a', target: 'dob_dd_b' },
+      { source: 'dob_mm_a', target: 'dob_mm_b' },
+      { source: 'dob_yyyy_a', target: 'dob_yyyy_b' }
     ]);
 
 
