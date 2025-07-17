@@ -619,6 +619,39 @@ $(document).ready(function () {
 
 	
   $('input[custom_attribute="disabled"]').addClass('disabled_field');
+
+
+
+
+  function linkFieldPairs(pairs) {
+    pairs.forEach(function (pair) {
+      const sourceId = pair.source;
+      const targetId = pair.target;
+
+      $('#' + sourceId).on('input change', function () {
+        let value = $(this).val();
+        let $target = $('#' + targetId);
+
+        if ($target.is('select')) {
+          if ($target.find('option[value="' + value + '"]').length) {
+            $target.val(value);
+          } else {
+            $target.append(new Option(value, value)).val(value);
+          }
+        } else {
+          $target.val(value);
+        }
+      });
+    });
+  }
+
+    linkFieldPairs([
+      { source: 'source1', target: 'target1' },
+      { source: 'source2', target: 'target2' },
+      { source: 'source3', target: 'target3' }
+    ]);
+
+
   
 });
 
