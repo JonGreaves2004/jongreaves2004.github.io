@@ -655,6 +655,9 @@ $(document).ready(function () {
     ]);
 
 
+  $('input[custom_attribute="disabled"], select[custom_attribute="disabled"], textarea[custom_attribute="disabled"], button[custom_attribute="disabled"]').prop('disabled', true);
+
+
   
 });
 
