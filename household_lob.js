@@ -463,17 +463,17 @@ $(document).ready(function () {
   
        // Hide/show Above Commercial Premises response
     $('#rem_acc_yn #1').click(function() {
-      $('#rem_acc').css('display','block');
+      $('#rem_acc').css('display','none');
     });
     $('#rem_acc_yn #2').click(function() {
-      $('#rem_acc').css('display','none');
+      $('#rem_acc').css('display','block');
     });
     
     $('#rem_acc_yn_too #1').click(function() {
-      $('#rem_acc').css('display','block');
+      $('#rem_acc').css('display','none');
     });
     $('#rem_acc_yn_too #2').click(function() {
-      $('#rem_acc').css('display','none');
+      $('#rem_acc').css('display','block');
     });
     
     
