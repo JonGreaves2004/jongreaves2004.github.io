@@ -210,10 +210,10 @@ $(document).ready(function () {
     });
     
      $('#xs_waiver_yn #1').click(function() {
-      $('#xs_waiver').css('display','block');
+      $('#xs_waiver').css('display','none');
     });
     $('#xs_waiver_yn #2').click(function() {
-      $('#xs_waiver').css('display','none');
+      $('#xs_waiver').css('display','block');
     });
     
      $('#open_cover_yn #1').click(function() {
@@ -510,10 +510,10 @@ $(document).ready(function () {
     });  
     
     $('#self_cont_yn #1').click(function() {
-      $('#self_cont').css('display','block');
+      $('#self_cont').css('display','none');
     });
     $('#self_cont_yn #2').click(function() {
-      $('#self_cont').css('display','none');
+      $('#self_cont').css('display','block');
     });  
     
     $('#bus_name_yn #1').click(function() {
