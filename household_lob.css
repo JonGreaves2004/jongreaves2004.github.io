@@ -272,4 +272,6 @@ input[type=radio]:checked + span:after {
 	display: none;
 }
 
-/* Nothing to see here */
+.input.disabled_field {
+    opacity: .5;
+}
