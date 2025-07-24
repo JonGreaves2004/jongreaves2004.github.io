@@ -435,35 +435,12 @@ $(document).ready(function () {
     
     
     //Update Radio button names
-    //$('.radio_button_option input[type=radio]').each(function(){
-    //  var newName = $(this).closest('.radio_button_choices').attr('id');
-    //  $(this).attr('name', newName+'_option');
-   // });
+    $('.radio_button_option input[type=radio]').each(function(){
+      var newName = $(this).closest('.radio_button_choices').attr('id');
+      $(this).attr('name', newName+'_option');
+    });
 
 
-	var usedNames = new Set();
-
-$('.radio_button_option input[type=radio]').each(function() {
-  var $group = $(this).closest('.radio_button_choices');
-  var groupId = $group.attr('id');
-  var newName = groupId + '_option';
-
-  // Check for uniqueness
-  if (usedNames.has(newName)) {
-    console.warn('Duplicate radio name detected:', newName);
-    // Optionally append a counter or random string to make it unique
-    var counter = 1;
-    while (usedNames.has(newName + '_' + counter)) {
-      counter++;
-    }
-    newName = newName + '_' + counter;
-  }
-
-  usedNames.add(newName);
-  $(this).attr('name', newName);
-});
-
-	
     
     
     
