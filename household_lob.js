@@ -675,7 +675,7 @@ $(document).ready(function () {
 	 function showAgeResult(text) {
         // If the #ageResult div doesn't exist yet, create it and insert after year input
         if ($('#ageResult').length === 0) {
-          $('<div id="ageResult"></div>').insertAfter('#dob_yyyy_b');
+          $('<div id="ageResult" class="label_text"></div>').insertAfter('#dob_yyyy_b');
         }
         $('#ageResult').text(text);
       }
