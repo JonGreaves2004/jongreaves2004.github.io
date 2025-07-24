@@ -422,6 +422,20 @@ $(document).ready(function () {
       var s = $(this).text();
       $('#occupancy_list').append('<option value="'+s+'">'+s+'</option>');
     });
+
+    $('#employment_types_options .listitem').each(function(){
+      var s = $(this).text();
+      $('#employment_type').append('<option value="'+s+'">'+s+'</option>');
+    });
+
+    $('#employment_types_options .listitem').each(function(){
+      var s = $(this).text();
+      $('#pt_employment_type').append('<option value="'+s+'">'+s+'</option>');
+    });	
+
+
+
+	
     
     //Open Blades
     $('#open_tel_blade').click(function() {
