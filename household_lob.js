@@ -435,20 +435,16 @@ $(document).ready(function () {
     
     
     //Update Radio button names
-    //$('.radio_button_option input[type=radio]').each(function(){
-    //  var newName = $(this).closest('.radio_button_choices').attr('id');
-    //  $(this).attr('name', newName+'_option');
-    //});
-
-	// Generate a unique name for each group of radio buttons under a "button_choices_id" div
-	//$('div[id="button_choices_id"]').each(function(index) {
-	//  var groupName = 'radio_group_' + index; // unique name for each group
+    // Loop through each group of radio buttons
+	$('.radio_button_choices').each(function(index) {
+	  var groupName = 'option_group_' + index; // unique name per group
 	
-	  // Find all radio buttons within this div
-	  //$(this).find('.radio_button_option input[type=radio]').each(function() {
-	  //  $(this).attr('name', groupName);
-	  //});
-	//});
+	  // Find all radio inputs with name="Option" inside this group and rename them
+	  $(this).find('input[type=radio][name="Option"]').each(function() {
+	    $(this).attr('name', groupName);
+	  });
+	});
+
 
 
 
