@@ -709,9 +709,9 @@ $(document).ready(function () {
         showAgeResult(`Age: ${age} years`);
       }
 
-      $('#year').on('input', function() {
-        const day = $('#day').val();
-        const month = $('#month').val();
+      $('#dob_yyyy_b').on('input', function() {
+        const day = $('#dob_dd_b').val();
+        const month = $('#dob_mm_b').val();
         const year = $(this).val();
 
         if (day.length === 2 && month.length === 2 && year.length === 4) {
