@@ -670,6 +670,55 @@ $(document).ready(function () {
 	$('#client_ref').val('THE/B/01011975/0001');
 
 
+
+
+	 function showAgeResult(text) {
+        // If the #ageResult div doesn't exist yet, create it and insert after year input
+        if ($('#ageResult').length === 0) {
+          $('<div id="ageResult"></div>').insertAfter('#dob_yyyy_b');
+        }
+        $('#ageResult').text(text);
+      }
+
+      function calculateAge() {
+        const day = parseInt($('#dob_dd_b').val(), 10);
+        const month = parseInt($('#dob_mm_b').val(), 10) - 1;
+        const year = parseInt($('#dob_yyyy_b').val(), 10);
+        const currentYear = new Date().getFullYear();
+
+        if (!day || !month || !year || year < 1000 || year > currentYear) {
+          showAgeResult("Please enter a valid date.");
+          return;
+        }
+
+        const dob = new Date(year, month, day);
+        const today = new Date();
+
+        if (isNaN(dob.getTime()) || dob > today) {
+          showAgeResult("Please enter a valid date.");
+          return;
+        }
+
+        let age = today.getFullYear() - dob.getFullYear();
+        const m = today.getMonth() - dob.getMonth();
+
+        if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) {
+          age--;
+        }
+
+        showAgeResult(`Age: ${age} years`);
+      }
+
+      $('#year').on('input', function() {
+        const day = $('#day').val();
+        const month = $('#month').val();
+        const year = $(this).val();
+
+        if (day.length === 2 && month.length === 2 && year.length === 4) {
+          calculateAge();
+        }
+      });
+
   
 });
 
