@@ -443,11 +443,26 @@ $(document).ready(function () {
       $('#type_of_bus_list').append('<option value="'+s+'">'+s+'</option>');
     });	
 
-	$('#type_of_work_options .listitem').each(function(){
+    $('#type_of_work_options .listitem').each(function(){
       var s = $(this).text();
       $('#type_of_work_list').append('<option value="'+s+'">'+s+'</option>');
     });	
 
+$('#items_kept_options .listitem').each(function(){
+      var s = $(this).text();
+      $('#equip_kept_list').append('<option value="'+s+'">'+s+'</option>');
+    });	
+
+	$('#stock_kept_options .listitem').each(function(){
+      var s = $(this).text();
+      $('#equip_kept_list').append('<option value="'+s+'">'+s+'</option>');
+    });	
+
+
+
+
+
+	
 
 
 	
@@ -461,7 +476,8 @@ $(document).ready(function () {
       $('.blade_overlay').css('display','none');
       $('.blade_flyout').css('right','-575px').css('display','flex');
     });
-    
+
+	
     
     //Update Radio button names
     // Loop through each group of radio buttons
