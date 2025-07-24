@@ -483,7 +483,31 @@ $(document).ready(function () {
       $('#let_occupancy').css('display','none'); 
     }
   });
-  
+
+
+$('#employment_type').on('change', function() {
+    const selectedValue = $(this).val();
+    if (['Household Duties'].includes(selectedValue)) {
+      $('#occ').val('');
+      $('#emp_bus').val('None - Household Duties');    
+    } else if (['Not Employed Due To Disability'].includes(selectedValue)) {
+      $('#occ').val('Not Employed Due to Disability');
+      $('#emp_bus').val('None - Not Employed Due to Disability');    
+    } else if (['Retired'].includes(selectedValue)) {
+      $('#occ').val('Retired');
+      $('#emp_bus').val('None - Retired');    
+    } else if (['Unemployed'].includes(selectedValue)) {
+      $('#occ').val('Unemployed');
+      $('#emp_bus').val('None - Unemployed');   
+      $('#unemployed').css('display','block'); 	    
+    } else {
+      $('#unemployed').css('display','none'); 
+      $('#occ').val('');
+      $('#emp_bus').val('');   	    
+    }
+  });	
+
+
        // Hide/show Above Commercial Premises response
     $('#rem_acc_yn #1').click(function() {
       $('#rem_acc').css('display','none');
