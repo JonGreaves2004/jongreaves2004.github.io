@@ -433,6 +433,21 @@ $(document).ready(function () {
       $('#pt_employment_type').append('<option value="'+s+'">'+s+'</option>');
     });	
 
+	$('#type_of_bus_prem_options .listitem').each(function(){
+      var s = $(this).text();
+      $('#type_of_bus_prem_list').append('<option value="'+s+'">'+s+'</option>');
+    });	
+
+	$('#type_of_bus_options .listitem').each(function(){
+      var s = $(this).text();
+      $('#type_of_bus_list').append('<option value="'+s+'">'+s+'</option>');
+    });	
+
+	$('#type_of_work_options .listitem').each(function(){
+      var s = $(this).text();
+      $('#type_of_work_list').append('<option value="'+s+'">'+s+'</option>');
+    });	
+
 
 
 	
