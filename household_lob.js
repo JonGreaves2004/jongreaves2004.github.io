@@ -338,6 +338,16 @@ $(document).ready(function () {
   });
 
 
+    $('#type_of_heating').on('change', function() {
+    const selectedValue = $(this).val();
+    if (['Gas Fired Central Heating'].includes(selectedValue)) {
+      $('#boiler_types').css('display','block');
+    } else {
+      $('#boiler_types').css('display','none'); 
+    }
+  });
+  
+
 
 
 
