@@ -285,3 +285,9 @@ input[type=radio]:checked + span:after {
 	margin-top: 30px;
 	width: 30%;
 }
+
+span.visible-id {
+    display: block;
+    font-weight: 600;
+    font-size: 16px;
+}
