@@ -531,15 +531,15 @@ var groupedOptions = {
   ],
   items_kept_options: [
     { value: 'main_building', text: 'Main Building' },
-    { value: 'outbuilding', text: 'Outbuilding' }
+    { value: 'outbuilding', text: 'Outbuilding' },
+    { value: 'list:_xxxxa', text: 'LIST: XXXXa' }
   ],
   flat_types_options: [
-    { value: 'list:_xxxxa', text: 'LIST: XXXXa' },
     { value: 'block', text: 'Block' },
-    { value: 'individual', text: 'Individual' }
+    { value: 'individual', text: 'Individual' },
+    { value: 'list:_xxxxb', text: 'LIST: XXXXb' }
   ],
   flat_floor_num_options: [
-    { value: 'list:_xxxxb', text: 'LIST: XXXXb' },
     { value: '0', text: '0' },
     { value: '1', text: '1' },
     { value: '2', text: '2' }
@@ -548,87 +548,87 @@ var groupedOptions = {
 
 $(document).ready(function () {
   var $select = $('#type_of_heating');
-  $.each(groupedOptions['title_options'], function(_, option) {
+  $.each(groupedOptions['heating_options'], function(_, option) {
     $select.append($('<option>', { value: option.value, text: option.text }));
   });
 
   var $select = $('#title_options_response_a');
-  $.each(groupedOptions['cc_consent_list'], function(_, option) {
+  $.each(groupedOptions['title_options'], function(_, option) {
     $select.append($('<option>', { value: option.value, text: option.text }));
   });
 
   var $select = $('#credit_check_consent_options');
-  $.each(groupedOptions['prop_addr_options'], function(_, option) {
+  $.each(groupedOptions['cc_consent_list'], function(_, option) {
     $select.append($('<option>', { value: option.value, text: option.text }));
   });
 
   var $select = $('#proposer_address_type_options');
-  $.each(groupedOptions['prop_dwell_status_options'], function(_, option) {
+  $.each(groupedOptions['prop_addr_options'], function(_, option) {
     $select.append($('<option>', { value: option.value, text: option.text }));
   });
 
   var $select = $('#proposer_dwelling_status_options');
-  $.each(groupedOptions['tel_type_options'], function(_, option) {
+  $.each(groupedOptions['prop_dwell_status_options'], function(_, option) {
     $select.append($('<option>', { value: option.value, text: option.text }));
   });
 
   var $select = $('#tel_type');
-  $.each(groupedOptions['marriage_status_options'], function(_, option) {
+  $.each(groupedOptions['tel_type_options'], function(_, option) {
     $select.append($('<option>', { value: option.value, text: option.text }));
   });
 
   var $select = $('#marriage_status');
-  $.each(groupedOptions['property_types'], function(_, option) {
+  $.each(groupedOptions['marriage_status_options'], function(_, option) {
     $select.append($('<option>', { value: option.value, text: option.text }));
   });
 
   var $select = $('#prop_type');
-  $.each(groupedOptions['ownership_options'], function(_, option) {
+  $.each(groupedOptions['property_types'], function(_, option) {
     $select.append($('<option>', { value: option.value, text: option.text }));
   });
 
   var $select = $('#ownership_select');
-  $.each(groupedOptions['boiler_type_options'], function(_, option) {
+  $.each(groupedOptions['ownership_options'], function(_, option) {
     $select.append($('<option>', { value: option.value, text: option.text }));
   });
 
   var $select = $('#boiler_type_list');
-  $.each(groupedOptions['occupancy_status_options'], function(_, option) {
+  $.each(groupedOptions['boiler_type_options'], function(_, option) {
     $select.append($('<option>', { value: option.value, text: option.text }));
   });
 
   var $select = $('#occupancy_list');
-  $.each(groupedOptions['alarm_types_options'], function(_, option) {
+  $.each(groupedOptions['occupancy_status_options'], function(_, option) {
     $select.append($('<option>', { value: option.value, text: option.text }));
   });
 
   var $select = $('#alarm_type_select');
-  $.each(groupedOptions['employment_types'], function(_, option) {
+  $.each(groupedOptions['alarm_types_options'], function(_, option) {
     $select.append($('<option>', { value: option.value, text: option.text }));
   });
 
   var $select = $('#employment_type');
-  $.each(groupedOptions['type_of_bus_options'], function(_, option) {
+  $.each(groupedOptions['employment_types'], function(_, option) {
     $select.append($('<option>', { value: option.value, text: option.text }));
   });
 
   var $select = $('#type_of_bus_list');
-  $.each(groupedOptions['type_of_bus_prem_options'], function(_, option) {
+  $.each(groupedOptions['type_of_bus_options'], function(_, option) {
     $select.append($('<option>', { value: option.value, text: option.text }));
   });
 
   var $select = $('#type_of_bus_prem_list');
-  $.each(groupedOptions['type_of_work_options'], function(_, option) {
+  $.each(groupedOptions['type_of_bus_prem_options'], function(_, option) {
     $select.append($('<option>', { value: option.value, text: option.text }));
   });
 
   var $select = $('#type_of_work_list');
-  $.each(groupedOptions['items_kept_options'], function(_, option) {
+  $.each(groupedOptions['type_of_work_options'], function(_, option) {
     $select.append($('<option>', { value: option.value, text: option.text }));
   });
 
   var $select = $('#equip_kept_list');
-  $.each(groupedOptions['flat_types_options'], function(_, option) {
+  $.each(groupedOptions['items_kept_options'], function(_, option) {
     $select.append($('<option>', { value: option.value, text: option.text }));
   });
 
