@@ -325,10 +325,10 @@ $(document).ready(function () {
     
 	 $('#alarm_type_select').on('change', function() {
     const selectedValue = $(this).val();
-     if (['NACOSS/SSAIB'].includes(selectedValue)) {
+     if (['nacoss/ssaib'].includes(selectedValue)) {
     	$('#alarm').css('display','block');
       $('#maintenance_contract').css('display','block');
-    } else if (['No Alarm Fitted'].includes(selectedValue)) {
+    } else if (['no_alarm_fitted'].includes(selectedValue)) {
       $('#alarm').css('display','none');
       $('#maintenance_contract').css('display','none'); 
     } else {
@@ -336,6 +336,7 @@ $(document).ready(function () {
       $('#maintenance_contract').css('display','none'); 
     }
   });
+
 
 
     $('#type_of_heating').on('change', function() {
@@ -346,13 +347,6 @@ $(document).ready(function () {
       $('#boiler_types').css('display','none'); 
     }
   });
-
-
-
-
-
-	
-
 
 	
     
@@ -387,7 +381,7 @@ $(document).ready(function () {
     
     $('#prop_type').on('change', function() {
     const selectedValue = $(this).val();
-    if (['Above Second Floor Flat Conversion', 'Above Second Floor Purpose Built Flat', 'Basement Flat Conversion', 'Basement Purpose Built Flat', 'First Floor Flat Conversion', 'First Floor Purpose Built Flat', 'Flats (Conversion To Existing Dwelling)', 'Ground Floor Flat Conversion', 'Ground Floor Purpose Built Flat', 'Purpose Built Flat/Apartment', 'Second Floor Flat Conversion', 'Second Floor Purpose Built Flat', 'Service Flat Within Employers Premises', 'Top Floor Flat Conversion', 'Top Floor Purpose Built Flat', 'Detached Maisonette', 'End Terraced Maisonette', 'Maisonette', 'Maisonette Conversion', 'Maisonette Purpose Built', 'Mid-Terraced Maisonette', 'Semi Detached Maisonette'].includes(selectedValue)) {
+    if (['above_second_floor_flat_conversion', 'above_second_floor_purpose_built_flat', 'basement_flat_conversion', 'basement_purpose_built_flat', 'first_floor_flat_conversion', 'first_floor_purpose_built_flat', 'flats_(conversion_to_existing_dwelling)', 'ground_floor_flat_conversion', 'ground_floor_purpose_built_flat', 'purpose_built_flat/apartment', 'second_floor_flat_conversion', 'second_floor_purpose_built_flat', 'service_flat_within_employers_premises', 'top_floor_flat_conversion', 'top_floor_purpose_built_flat', 'detached_maisonette', 'end_terraced_maisonette', 'maisonette' , 'maisonette_conversion', 'maisonette_purpose_built', 'mid-terraced_maisonette', 'semi_detached_maisonette'].includes(selectedValue)) {
       $('#flat_extra').css('display','block');
     } else {
       $('#flat_extra').css('display','none'); 
