@@ -644,7 +644,7 @@ $(document).ready(function () {
     $select.append($('<option>', { value: option.value, text: option.text }));
   });
 
-  var $select = $('#equip_kept_list');
+  var $select = $('#stock_kept_list');
   $.each(groupedOptions['items_kept_options'], function(_, option) {
     $select.append($('<option>', { value: option.value, text: option.text }));
   });
