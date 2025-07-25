@@ -789,10 +789,12 @@ $('#employment_type').on('change', function() {
       });
 
 
+
+
 	$('.hidden_list').each(function() {
     var divId = $(this).attr('id');
     if (divId) {
-      $(this).after('<span class="visible-id">' + divId + '</span>');
+      $(this).prepend('<span class="visible-id">ID: ' + divId + '</span>');
     }
   });
 
