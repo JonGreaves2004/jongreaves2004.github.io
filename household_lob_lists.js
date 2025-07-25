@@ -531,13 +531,11 @@ var groupedOptions = {
   ],
   items_kept_options: [
     { value: 'main_building', text: 'Main Building' },
-    { value: 'outbuilding', text: 'Outbuilding' },
-    { value: 'list:_xxxxa', text: 'LIST: XXXXa' }
+    { value: 'outbuilding', text: 'Outbuilding' }
   ],
   flat_types_options: [
     { value: 'block', text: 'Block' },
-    { value: 'individual', text: 'Individual' },
-    { value: 'list:_xxxxb', text: 'LIST: XXXXb' }
+    { value: 'individual', text: 'Individual' }
   ],
   flat_floor_num_options: [
     { value: '0', text: '0' },
@@ -632,4 +630,29 @@ $(document).ready(function () {
     $select.append($('<option>', { value: option.value, text: option.text }));
   });
 
+
+  
+
+  // Options reuse for other lists....
+  var $select = $('#title_options_response_b');
+  $.each(groupedOptions['title_options'], function(_, option) {
+    $select.append($('<option>', { value: option.value, text: option.text }));
+  });
+  
+  var $select = $('#pt_employment_type');
+  $.each(groupedOptions['employment_types'], function(_, option) {
+    $select.append($('<option>', { value: option.value, text: option.text }));
+  });
+
+  var $select = $('#equip_kept_list');
+  $.each(groupedOptions['items_kept_options'], function(_, option) {
+    $select.append($('<option>', { value: option.value, text: option.text }));
+  });
+
+
+
+
+  
+
+  
 });
