@@ -13,7 +13,6 @@ var groupedOptions = {
     { value: 'air_marshall', text: 'Air Marshall' },
     { value: 'air_vice_marshall', text: 'Air Vice Marshall' },
     { value: 'airman', text: 'Airman' },
-    { value: 'an_t'uasal', text: 'An t'Uasal' },
     { value: 'baron', text: 'Baron' },
     { value: 'baroness', text: 'Baroness' },
     { value: 'bean', text: 'Bean' },
