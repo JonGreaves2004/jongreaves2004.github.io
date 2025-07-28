@@ -273,7 +273,8 @@ input[type=radio]:checked + span:after {
 #above_comm,
 #flooding,
 #holiday_home,
-#unoccupied_prop {
+#unoccupied_prop,
+#unoccupancy_prev_ins {
 	display: none;
 }
 
