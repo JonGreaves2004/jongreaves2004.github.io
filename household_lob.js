@@ -412,10 +412,16 @@
     const selectedValue = $(this).val();
     if (['let_-_unemployed_but_not_benefit_assisted', 'let_-_students', 'let_-_retired_persons_only', 'let_-_professional', 'let_-_mixed_tenant_types', 'let_-_family_members_only', 'let_-_benefits_assisted', 'let_-_asylum_seekers'].includes(selectedValue)) {
       $('#let_occupancy').css('display','block');
+      $('#holiday_home').css('display','none');
+      $('#unoccupied_prop').css('display','none');	    
     } else if (['holiday_home'].includes(selectedValue)) {
       $('#holiday_home').css('display','block');
+      $('#let_occupancy').css('display','none'); 
+      $('#unoccupied_prop').css('display','none');
     } else if (['unoccupied_-_occupant_deceased', 'unoccupied'].includes(selectedValue)) {
       $('#unoccupied_prop').css('display','block');
+      $('#let_occupancy').css('display','none'); 
+      $('#holiday_home').css('display','none');
     } else {
       $('#let_occupancy').css('display','none'); 
       $('#holiday_home').css('display','none');
