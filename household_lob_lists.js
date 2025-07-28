@@ -655,6 +655,17 @@ var groupedOptions = {
     { value: 'holiday_home', text: 'Holiday Home' },
     { value: 'permanent_home', text: 'Permanent Home' },
     { value: 'personal_use', text: 'Personal Use' }
+  ],
+  cover_refused_reason_options: [
+    { value: 'claims_experience', text: 'Claims Experience' },
+    { value: 'non-disclosure', text: 'Non-disclosure' },
+    { value: 'non-payment', text: 'Non-payment' },
+    { value: 'other', text: 'Other' },
+    { value: 'the_insurer_did_not_cover_the_type_of_underwriting_risk', text: 'The insurer did not cover the type of underwriting risk' }
+  ],
+  terms_applied_reason_options: [
+    { value: 'claims_experience', text: 'Claims experience' },
+    { value: 'other', text: 'Other' }
   ]
 };
 
@@ -833,7 +844,16 @@ $(document).ready(function () {
   $.each(groupedOptions['holiday_home_use_options'], function(_, option) {
     $select.append($('<option>', { value: option.text, text: option.text }));
   });
-  
+
+  var $select = $('#cover_refused_reason_list');
+  $.each(groupedOptions['cover_refused_reason_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
+
+  var $select = $('#terms_applied_reason_list');
+  $.each(groupedOptions['terms_applied_reason_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
 
   
 
