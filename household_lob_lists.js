@@ -570,6 +570,15 @@ var groupedOptions = {
     { value: 'grade_2_listed_building', text: 'Grade 2 Listed Building' },
     { value: 'not_listed', text: 'Not Listed' },
     { value: 'preservation_order', text: 'Preservation Order' }
+  ],
+  wall_const_options: [
+    { value: 'brick', text: 'Brick' },
+    { value: 'concrete', text: 'Concrete' },
+    { value: 'stone', text: 'Stone' }
+  ],
+  roof_const_options: [
+    { value: 'slate', text: 'Slate' },
+    { value: 'tile', text: 'Tile' }
   ]
 
 };
@@ -692,6 +701,16 @@ $(document).ready(function () {
 
   var $select = $('#arch_interest_list');
   $.each(groupedOptions['arch_interest_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
+
+  var $select = $('#wall_const_list');
+  $.each(groupedOptions['wall_const_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
+
+  var $select = $('#roof_const_list');
+  $.each(groupedOptions['roof_const_options'], function(_, option) {
     $select.append($('<option>', { value: option.text, text: option.text }));
   });
 
