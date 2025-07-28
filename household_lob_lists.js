@@ -650,6 +650,11 @@ var groupedOptions = {
     { value: 'irregular_intervals', text: 'Irregular Intervals' },
     { value: 'monthly', text: 'Monthly' },
     { value: 'other', text: 'Other' }
+  ],
+  holiday_home_use_options: [
+    { value: 'holiday_home', text: 'Holiday Home' },
+    { value: 'permanent_home', text: 'Permanent Home' },
+    { value: 'personal_use', text: 'Personal Use' }
   ]
 };
 
@@ -824,6 +829,10 @@ $(document).ready(function () {
     $select.append($('<option>', { value: option.text, text: option.text }));
   });
 
+  var $select = $('#holiday_home_use_list');
+  $.each(groupedOptions['holiday_home_use_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
   
 
   
