@@ -607,7 +607,7 @@ var groupedOptions = {
     { value: 'moving_overseas', text: 'Moving Overseas' },
     { value: 'working_away', text: 'Working Away' }
   ],
-  type_of_work_options: [
+  type_of_property_work_options: [
     { value: 'adding_a_conservatory', text: 'Adding a conservatory' },
     { value: 'adding_an_extension', text: 'Adding an extension' },
     { value: 'adding_outbuildings', text: 'Adding outbuildings' },
@@ -780,8 +780,8 @@ $(document).ready(function () {
     $select.append($('<option>', { value: option.text, text: option.text }));
   });
 
-  var $select = $('#type_of_work_list');
-  $.each(groupedOptions['type_of_work_options'], function(_, option) {
+  var $select = $('#type_of_property_work_list');
+  $.each(groupedOptions['type_of_property_work_options'], function(_, option) {
     $select.append($('<option>', { value: option.text, text: option.text }));
   });
   
