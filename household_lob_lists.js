@@ -630,6 +630,16 @@ $(document).ready(function () {
     $select.append($('<option>', { value: option.value, text: option.text }));
   });
 
+  var $select = $('#flat_type');
+  $.each(groupedOptions['flat_types_options'], function(_, option) {
+    $select.append($('<option>', { value: option.value, text: option.text }));
+  });
+
+  var $select = $('#flat_floor');
+  $.each(groupedOptions['flat_floor_num_options'], function(_, option) {
+    $select.append($('<option>', { value: option.value, text: option.text }));
+  });
+
 
   
 
