@@ -414,10 +414,14 @@
       $('#let_occupancy').css('display','block');
     } else if (['holiday_home'].includes(selectedValue)) {
       $('#holiday_home').css('display','block');
+    } else if (['unoccupied_-_occupant_deceased', 'unoccupied'].includes(selectedValue)) {
+      $('#unoccupied_prop').css('display','block');
     } else {
       $('#let_occupancy').css('display','none'); 
     }
   });
+
+	 
 
 
 $('#employment_type').on('change', function() {
