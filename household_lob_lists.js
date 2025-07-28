@@ -666,6 +666,32 @@ var groupedOptions = {
   terms_applied_reason_options: [
     { value: 'claims_experience', text: 'Claims experience' },
     { value: 'other', text: 'Other' }
+  ],
+  contents_level_of_cover_options: [
+    { value: 'flea_(fire,_lightning,_explosion,_earthquake_and_aircraft)_and_subsidence', text: 'Flea (Fire, Lightning, Explosion, Earthquake and Aircraft) and Subsidence' },
+    { value: 'flea_only', text: 'Flea only' },
+    { value: 'full_perils', text: 'Full Perils' }
+  ],
+  contents_vol_excess_options: [
+    { value: '0', text: '0' },
+    { value: '50', text: '50' },
+    { value: '100', text: '100' },
+    { value: '150', text: '150' },
+    { value: '200', text: '200' },
+    { value: '250', text: '250' },
+    { value: '300', text: '300' },
+    { value: '350', text: '350' },
+    { value: '400', text: '400' },
+    { value: '450', text: '450' },
+    { value: '500', text: '500' }
+  ],
+  prev_ins_premium_paid_options: [
+    { value: 'annually', text: 'Annually' },
+    { value: 'free_insurance_provided', text: 'Free Insurance Provided' },
+    { value: 'monthly', text: 'Monthly' },
+    { value: 'no_previous_insurance', text: 'No Previous Insurance' },
+    { value: 'quarterly', text: 'Quarterly' },
+    { value: 'withheld', text: 'Withheld' }
   ]
 };
 
@@ -855,6 +881,20 @@ $(document).ready(function () {
     $select.append($('<option>', { value: option.text, text: option.text }));
   });
 
+  var $select = $('#contents_level_of_cover_list');
+  $.each(groupedOptions['contents_level_of_cover_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
+
+  var $select = $('#contents_vol_excess_list');
+  $.each(groupedOptions['contents_vol_excess_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
+
+  var $select = $('#prev_ins_premium_paid_list');
+  $.each(groupedOptions['prev_ins_premium_paid_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
   
 
   // Options reuse for other lists....
