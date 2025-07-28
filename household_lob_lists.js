@@ -564,6 +564,12 @@ var groupedOptions = {
   liability_loi_options: [
     { value: 'l1,000,000', text: 'L1,000,000' },
     { value: 'l2,000,000', text: 'L2,000,000' }
+  ],
+  arch_interest_options: [
+    { value: 'grade_1_listed_building', text: 'Grade 1 Listed Building' },
+    { value: 'grade_2_listed_building', text: 'Grade 2 Listed Building' },
+    { value: 'not_listed', text: 'Not Listed' },
+    { value: 'preservation_order', text: 'Preservation Order' }
   ]
 
 };
@@ -681,6 +687,11 @@ $(document).ready(function () {
 
   var $select = $('#liability_loi_list');
   $.each(groupedOptions['liability_loi_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
+
+  var $select = $('#arch_interest_list');
+  $.each(groupedOptions['arch_interest_options'], function(_, option) {
     $select.append($('<option>', { value: option.text, text: option.text }));
   });
 
