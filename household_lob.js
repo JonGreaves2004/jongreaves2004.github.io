@@ -286,6 +286,13 @@ $(document).ready(function () {
       $('#above_comm').css('display','none');
     }); 
 
+    $('#flooding_yn #1').click(function() {
+      $('#flooding').css('display','none');
+    });
+    $('#flooding_yn #2').click(function() {
+      $('#flooding').css('display','block');
+    }); 
+
 
 
 
