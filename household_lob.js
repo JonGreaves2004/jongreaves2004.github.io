@@ -418,6 +418,8 @@
       $('#unoccupied_prop').css('display','block');
     } else {
       $('#let_occupancy').css('display','none'); 
+      $('#holiday_home').css('display','none');
+      $('#unoccupied_prop').css('display','none');	    
     }
   });
 
