@@ -278,6 +278,18 @@ $(document).ready(function () {
     $('#outbuildings_theft_yn #2').click(function() {
       $('#outbuildings_theft').css('display','none');
     }); 
+
+    $('#above_comm_yn #1').click(function() {
+      $('#above_comm').css('display','block');
+    });
+    $('#above_comm_yn #2').click(function() {
+      $('#above_comm').css('display','none');
+    }); 
+
+
+
+
+	
     
     
     $('#prev_ins_name').on('change', function() {
