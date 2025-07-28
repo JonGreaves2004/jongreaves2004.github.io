@@ -401,16 +401,16 @@ $(document).ready(function () {
 
 $('#employment_type').on('change', function() {
     const selectedValue = $(this).val();
-    if (['Household Duties'].includes(selectedValue)) {
+    if (['household_duties'].includes(selectedValue)) {
       $('#occ').val('');
       $('#emp_bus').val('None - Household Duties');    
-    } else if (['Not Employed Due To Disability'].includes(selectedValue)) {
+    } else if (['not_employed_due_to_disability'].includes(selectedValue)) {
       $('#occ').val('Not Employed Due to Disability');
       $('#emp_bus').val('None - Not Employed Due to Disability');    
-    } else if (['Retired'].includes(selectedValue)) {
+    } else if (['retired'].includes(selectedValue)) {
       $('#occ').val('Retired');
       $('#emp_bus').val('None - Retired');    
-    } else if (['Unemployed'].includes(selectedValue)) {
+    } else if (['unemployed'].includes(selectedValue)) {
       $('#occ').val('Unemployed');
       $('#emp_bus').val('None - Unemployed');   
       $('#unemployed').css('display','block'); 	    
