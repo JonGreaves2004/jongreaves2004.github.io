@@ -606,6 +606,25 @@ var groupedOptions = {
     { value: 'investment_property', text: 'Investment Property' },
     { value: 'moving_overseas', text: 'Moving Overseas' },
     { value: 'working_away', text: 'Working Away' }
+  ],
+  type_of_work_options: [
+    { value: 'adding_a_conservatory', text: 'Adding a conservatory' },
+    { value: 'adding_an_extension', text: 'Adding an extension' },
+    { value: 'adding_outbuildings', text: 'Adding outbuildings' },
+    { value: 'converting_the_garage', text: 'Converting the garage' },
+    { value: 'converting_the_loft', text: 'Converting the loft' },
+    { value: 'full_site_redevelopment', text: 'Full site redevelopment' },
+    { value: 'general_refurbishment', text: 'General refurbishment' }
+  ],
+  unoccupancy_reasons_options: [
+    { value: 'awaiting_let', text: 'Awaiting Let' },
+    { value: 'awaiting_sale', text: 'Awaiting Sale' },
+    { value: 'away_on_holiday', text: 'Away on holiday' },
+    { value: 'holiday', text: 'Holiday' },
+    { value: 'property_is_subject_of_a_will', text: 'Property is subject of a will' },
+    { value: 'property_to_be_demolished', text: 'Property to be demolished' },
+    { value: 'to_undergo_major_and/or_structural_renovation', text: 'To undergo major and/or structural renovation' },
+    { value: 'to_undergo_minor_redecoration/renovation', text: 'To undergo minor redecoration/renovation' }
   ]
 
 };
@@ -758,6 +777,16 @@ $(document).ready(function () {
 
   var $select = $('#reason_for_letting_list');
   $.each(groupedOptions['reason_for_letting_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
+
+  var $select = $('#type_of_work_list');
+  $.each(groupedOptions['type_of_work_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
+  
+  var $select = $('#unoccupancy_reasons_list');
+  $.each(groupedOptions['unoccupancy_reasons_options'], function(_, option) {
     $select.append($('<option>', { value: option.text, text: option.text }));
   });
 
