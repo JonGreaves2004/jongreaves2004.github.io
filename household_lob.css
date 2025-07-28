@@ -272,7 +272,8 @@ input[type=radio]:checked + span:after {
 #unemployed,
 #above_comm,
 #flooding,
-#holiday_home {
+#holiday_home,
+#unoccupied_prop {
 	display: none;
 }
 
