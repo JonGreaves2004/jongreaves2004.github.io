@@ -579,6 +579,33 @@ var groupedOptions = {
   roof_const_options: [
     { value: 'slate', text: 'Slate' },
     { value: 'tile', text: 'Tile' }
+  ],
+  type_of_tenant_options: [
+    { value: 'asylum_seekers', text: 'Asylum Seekers' },
+    { value: 'dss_-_non_referrals', text: 'DSS - non referrals' },
+    { value: 'dss_-_referrals', text: 'DSS - referrals' },
+    { value: 'family_let', text: 'Family Let' },
+    { value: 'holiday', text: 'Holiday' },
+    { value: 'n/a', text: 'N/A' },
+    { value: 'professionals', text: 'Professionals' },
+    { value: 'students', text: 'Students' }
+  ],
+  type_of_tenancy_agreement_options: [
+    { value: 'other', text: 'Other' },
+    { value: 'self_and_local_authority/dss', text: 'Self and Local Authority/DSS' },
+    { value: 'self_and_tenant', text: 'Self and Tenant' }
+  ],
+  tenant_relationship_options: [
+    { value: 'landlord', text: 'Landlord' },
+    { value: 'owner', text: 'Owner' },
+    { value: 'tenant', text: 'Tenant' }
+  ],
+  reason_for_letting_options: [
+    { value: 'extended_holiday', text: 'Extended Holiday' },
+    { value: 'holiday_let', text: 'Holiday Let' },
+    { value: 'investment_property', text: 'Investment Property' },
+    { value: 'moving_overseas', text: 'Moving Overseas' },
+    { value: 'working_away', text: 'Working Away' }
   ]
 
 };
@@ -711,6 +738,26 @@ $(document).ready(function () {
 
   var $select = $('#roof_const_list');
   $.each(groupedOptions['roof_const_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
+
+  var $select = $('#type_of_tenant_list');
+  $.each(groupedOptions['type_of_tenant_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
+
+  var $select = $('#type_of_tenancy_agreement_list');
+  $.each(groupedOptions['type_of_tenancy_agreement_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
+
+  var $select = $('#tenant_relationship_list');
+  $.each(groupedOptions['tenant_relationship_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
+
+  var $select = $('#reason_for_letting_list');
+  $.each(groupedOptions['reason_for_letting_options'], function(_, option) {
     $select.append($('<option>', { value: option.text, text: option.text }));
   });
 
