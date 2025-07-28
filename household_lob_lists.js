@@ -625,8 +625,32 @@ var groupedOptions = {
     { value: 'property_to_be_demolished', text: 'Property to be demolished' },
     { value: 'to_undergo_major_and/or_structural_renovation', text: 'To undergo major and/or structural renovation' },
     { value: 'to_undergo_minor_redecoration/renovation', text: 'To undergo minor redecoration/renovation' }
+  ],
+  reason_for_unoccupancy_options: [
+    { value: 'awaiting_let', text: 'Awaiting Let' },
+    { value: 'awaiting_sale', text: 'Awaiting Sale' },
+    { value: 'currently_undergoing_major_and/or_structural_renovation', text: 'Currently undergoing major and/or structural renovation' },
+    { value: 'currently_undergoing_minor_redecoration/renovation', text: 'Currently undergoing minor redecoration/renovation' },
+    { value: 'holiday', text: 'Holiday' },
+    { value: 'property_is_subject_of_a_will', text: 'Property is subject of a will' },
+    { value: 'property_to_be_demolished', text: 'Property to be demolished' }
+  ],
+  inspection_frequency_options: [
+    { value: '0_days', text: '0 days' },
+    { value: '10_days', text: '10 days' },
+    { value: '14_days', text: '14 days' },
+    { value: '21_days', text: '21 days' },
+    { value: '3_monthly', text: '3 Monthly' },
+    { value: '30_days', text: '30 days' },
+    { value: '45_days', text: '45 days' },
+    { value: '6_monthly', text: '6 Monthly' },
+    { value: '60_days', text: '60 days' },
+    { value: '7_days', text: '7 days' },
+    { value: 'every_12_months', text: 'Every 12 Months' },
+    { value: 'irregular_intervals', text: 'Irregular Intervals' },
+    { value: 'monthly', text: 'Monthly' },
+    { value: 'other', text: 'Other' }
   ]
-
 };
 
 $(document).ready(function () {
@@ -790,6 +814,15 @@ $(document).ready(function () {
     $select.append($('<option>', { value: option.text, text: option.text }));
   });
 
+  var $select = $('#reason_for_unoccupancy_list');
+  $.each(groupedOptions['reason_for_unoccupancy_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
+
+  var $select = $('#inspection_frequency_list');
+  $.each(groupedOptions['inspection_frequency_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
 
   
 
