@@ -1,4 +1,4 @@
- if$(document).ready(function () {
+ $(document).ready(function () {
     var currentHeading = null;
 
     $(window).scroll(function () {
