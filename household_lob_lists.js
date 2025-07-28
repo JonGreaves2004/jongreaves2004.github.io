@@ -541,7 +541,31 @@ var groupedOptions = {
     { value: '0', text: '0' },
     { value: '1', text: '1' },
     { value: '2', text: '2' }
+  ],
+  flood_cause_options: [
+    { value: 'canal_failure', text: 'Canal failure' },
+    { value: 'dam_burst', text: 'Dam burst' },
+    { value: 'groundwater_rising', text: 'Groundwater rising' },
+    { value: 'heavy_rainfall', text: 'Heavy rainfall' },
+    { value: 'river_burst_its_banks', text: 'River burst its banks' },
+    { value: 'sea_breaches_defences', text: 'Sea breaches defences' }
+  ],
+  who_affected_options: [
+    { value: 'other', text: 'Other' },
+    { value: 'this_property', text: 'This Property' }
+  ],
+  type_of_res_options: [
+    { value: 'halls_of_residence', text: 'Halls of residence' },
+    { value: 'non-self_contained_flat', text: 'Non-self contained flat' },
+    { value: 'nursing_home', text: 'Nursing home' },
+    { value: 'other', text: 'Other' },
+    { value: 'room(s)_in_private_dwelling', text: 'Room(s) in private dwelling' }
+  ],
+  liability_loi_options: [
+    { value: 'l1,000,000', text: 'L1,000,000' },
+    { value: 'l2,000,000', text: 'L2,000,000' }
   ]
+
 };
 
 $(document).ready(function () {
@@ -640,6 +664,28 @@ $(document).ready(function () {
     $select.append($('<option>', { value: option.value, text: option.text }));
   });
 
+  var $select = $('#flood_cause_list');
+  $.each(groupedOptions['flood_cause_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
+
+  var $select = $('#who_affected_list');
+  $.each(groupedOptions['who_affected_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
+
+  var $select = $('#type_of_res_list');
+  $.each(groupedOptions['type_of_res_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
+
+  var $select = $('#liability_loi_list');
+  $.each(groupedOptions['liability_loi_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
+
+
+  
 
   
 
