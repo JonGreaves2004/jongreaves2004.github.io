@@ -1,4 +1,4 @@
-$(document).ready(function () {
+ if$(document).ready(function () {
     var currentHeading = null;
 
     $(window).scroll(function () {
@@ -412,6 +412,8 @@ $(document).ready(function () {
     const selectedValue = $(this).val();
     if (['let_-_unemployed_but_not_benefit_assisted', 'let_-_students', 'let_-_retired_persons_only', 'let_-_professional', 'let_-_mixed_tenant_types', 'let_-_family_members_only', 'let_-_benefits_assisted', 'let_-_asylum_seekers'].includes(selectedValue)) {
       $('#let_occupancy').css('display','block');
+    } else if (['holiday_home'].includes(selectedValue)) {
+      $('#holiday_home').css('display','block');
     } else {
       $('#let_occupancy').css('display','none'); 
     }
