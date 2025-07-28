@@ -974,7 +974,7 @@ var groupedInsOptions = {
 };
 
 $(document).ready(function () {
-  var $select = $('#insurer_name_list');
+  var $select = $('#prev_ins_name');
   $.each(groupedInsOptions['insurer_name_options'], function(_, option) {
     $select.append($('<option>', { value: option.text, text: option.text }));
   });
