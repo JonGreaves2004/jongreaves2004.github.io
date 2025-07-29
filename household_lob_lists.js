@@ -692,6 +692,62 @@ var groupedOptions = {
     { value: 'no_previous_insurance', text: 'No Previous Insurance' },
     { value: 'quarterly', text: 'Quarterly' },
     { value: 'withheld', text: 'Withheld' }
+  ],
+  lock_type_options: [
+    { value: '3_bolt_multipoint_locking_system', text: '3 Bolt Multipoint Locking System' },
+    { value: 'anti_ram_raid_bollards', text: 'Anti Ram Raid Bollards' },
+    { value: 'anti-flood_taps', text: 'Anti-Flood Taps' },
+    { value: 'anti-lift_device', text: 'Anti-Lift Device' },
+    { value: 'bars', text: 'Bars' },
+    { value: 'cable_lock_devices', text: 'Cable Lock Devices' },
+    { value: 'close_shackle_padlock_-_5_or_more_levers', text: 'Close Shackle Padlock - 5 Or More Levers' },
+    { value: 'code_door_lock', text: 'Code Door Lock' },
+    { value: 'dead_bolt', text: 'Dead Bolt' },
+    { value: 'external_grills', text: 'External Grills' },
+    { value: 'frames_greater_than_45mm_thick', text: 'Frames Greater Than 45mm Thick' },
+    { value: 'hinge_bolts', text: 'Hinge Bolts' },
+    { value: 'hitchlock', text: 'Hitchlock' },
+    { value: 'hook_bolt', text: 'Hook Bolt' },
+    { value: 'hook_bolt_bs3621', text: 'Hook Bolt BS3621' },
+    { value: 'internal_grills', text: 'Internal Grills' },
+    { value: 'key_operated_door_stop', text: 'Key Operated Door Stop' },
+    { value: 'key_operated_mortise_securty_bolt', text: 'Key Operated Mortise Securty Bolt' },
+    { value: 'key_operated_surface_security_bolt', text: 'Key Operated Surface Security Bolt' },
+    { value: 'key_operated_window_locks', text: 'Key Operated Window Locks' },
+    { value: 'lock_down_devices', text: 'Lock Down Devices' },
+    { value: 'locking_bar', text: 'Locking Bar' },
+    { value: 'mortise_deadlock_-_3_lever', text: 'Mortise Deadlock - 3 Lever' },
+    { value: 'mortise_deadlock_-_4_lever', text: 'Mortise Deadlock - 4 Lever' },
+    { value: 'mortise_deadlock_-_5_or_more_levers', text: 'Mortise Deadlock - 5 Or More Levers' },
+    { value: 'mortise_deadlock_-_5_or_more_levers_bs3621', text: 'Mortise Deadlock - 5 Or More Levers BS3621' },
+    { value: 'mortise_rack_bolts', text: 'Mortise Rack Bolts' },
+    { value: 'open_shackle_padlock_-_5_or_more_levers', text: 'Open Shackle Padlock - 5 Or More Levers' },
+    { value: 'other', text: 'Other' },
+    { value: 'outboard_motor_security_lock', text: 'Outboard Motor Security Lock' },
+    { value: 'rim_deadlock', text: 'Rim Deadlock' },
+    { value: 'rim_lock', text: 'Rim Lock' },
+    { value: 'rim_lock_automatic_deadlock', text: 'Rim Lock Automatic Deadlock' },
+    { value: 'rim_lock_automatic_deadlock_bs3621', text: 'Rim Lock Automatic Deadlock BS3621' },
+    { value: 'security_fence', text: 'Security Fence' },
+    { value: 'security_lock', text: 'Security Lock' },
+    { value: 'security_marking', text: 'Security Marking' },
+    { value: 'shoot_bolt', text: 'Shoot Bolt' },
+    { value: 'shutters_-_metal', text: 'Shutters - Metal' },
+    { value: 'shutters_-_wooden', text: 'Shutters - Wooden' },
+    { value: 'standard_iron_grills', text: 'Standard Iron Grills' },
+    { value: 'steel_lined_doors', text: 'Steel Lined Doors' },
+    { value: 'tunnel_bolts', text: 'Tunnel Bolts' },
+    { value: 'wheel_clamp', text: 'Wheel Clamp' }
+  ],
+  mains_or_battery_options: [
+    { value: 'battery', text: 'Battery' },
+    { value: 'mains', text: 'Mains' }
+  ],
+  safe_type_options: [
+    { value: 'portable', text: 'Portable' },
+    { value: 'stand_alone', text: 'Stand Alone' },
+    { value: 'under_floor', text: 'Under Floor' },
+    { value: 'wall', text: 'Wall' }
   ]
 };
 
@@ -895,6 +951,21 @@ $(document).ready(function () {
   $.each(groupedOptions['prev_ins_premium_paid_options'], function(_, option) {
     $select.append($('<option>', { value: option.text, text: option.text }));
   });
+
+  var $select = $('#lock_type_list');
+  $.each(groupedOptions['lock_type_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
+
+  var $select = $('#mains_or_battery_list');
+  $.each(groupedOptions['mains_or_battery_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
+
+  var $select = $('#safe_type_list');
+  $.each(groupedOptions['safe_type_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
   
 
   // Options reuse for other lists....
@@ -911,6 +982,11 @@ $(document).ready(function () {
   var $select = $('#stock_kept_list');
   $.each(groupedOptions['items_kept_options'], function(_, option) {
     $select.append($('<option>', { value: option.value, text: option.text }));
+  });
+
+  var $select = $('#window_lock_type_list');
+  $.each(groupedOptions['lock_type_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
   });
 
 
