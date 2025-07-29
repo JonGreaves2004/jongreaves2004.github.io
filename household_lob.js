@@ -320,10 +320,10 @@
     }); 
     
     $('#window_lock_yn #1').click(function() {
-      $('window_lock#').css('display','block');
+      $('#window_lock').css('display','block');
     });
     $('#window_lock_yn #2').click(function() {
-      $('window_lock#').css('display','none');
+      $('#window_lock').css('display','none');
     });
     
     $('#smoke_detectors_yn #1').click(function() {
