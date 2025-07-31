@@ -730,7 +730,7 @@ $('#employment_type').on('change', function() {
     age--;
   }
 
-  showAgeResult(`Age: ${age} years`);
+  showAgeResult(`Age: ${age} `);
 }
 
 
