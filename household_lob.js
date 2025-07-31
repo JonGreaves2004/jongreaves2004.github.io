@@ -714,7 +714,7 @@ $('#employment_type').on('change', function() {
           age--;
         }
 
-        showAgeResult(`Age: ${age} years`);
+        showAgeResult(`Age: ${age}`);
       }
 
       $('#dob_yyyy_a, #dob_yyyy_b').on('input', function() {
