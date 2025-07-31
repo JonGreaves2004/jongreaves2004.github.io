@@ -688,34 +688,51 @@ $('#employment_type').on('change', function() {
         $('#ageResult').text(text);
       }
 
-      function calculateAge() {
-        const day = parseInt($('#dob_dd_b').val(), 10);
-        const month = parseInt($('#dob_mm_b').val(), 10) - 1;
-        const year = parseInt($('#dob_yyyy_b').val(), 10);
-        const currentYear = new Date().getFullYear();
+  function calculateAge() {
+  const day = parseInt($('#dob_dd_b').val(), 10);
+  const monthInput = parseInt($('#dob_mm_b').val(), 10);
+  const year = parseInt($('#dob_yyyy_b').val(), 10);
+  const currentYear = new Date().getFullYear();
 
-        if (!day || !month || !year || year < 1000 || year > currentYear) {
-          showAgeResult("Enter a valid date.");
-          return;
-        }
+  // Adjust month for JavaScript Date (0-based index)
+  const month = monthInput - 1;
 
-        const dob = new Date(year, month, day);
-        const today = new Date();
+  // Basic validation
+  if (
+    isNaN(day) || day < 1 || day > 31 ||
+    isNaN(monthInput) || month < 0 || month > 11 ||
+    isNaN(year) || year < 1000 || year > currentYear
+  ) {
+    showAgeResult("Please enter a valid date.");
+    return;
+  }
 
-        if (isNaN(dob.getTime()) || dob > today) {
-          showAgeResult("Please enter a valid date.");
-          return;
-        }
+  const dob = new Date(year, month, day);
+  const today = new Date();
 
-        let age = today.getFullYear() - dob.getFullYear();
-        const m = today.getMonth() - dob.getMonth();
+  // Ensure date matches input (e.g., avoids invalid like 31 Feb)
+  if (
+    isNaN(dob.getTime()) ||
+    dob.getDate() !== day ||
+    dob.getMonth() !== month ||
+    dob.getFullYear() !== year ||
+    dob > today
+  ) {
+    showAgeResult("Please enter a valid date.");
+    return;
+  }
 
-        if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) {
-          age--;
-        }
+  // Age calculation
+  let age = today.getFullYear() - dob.getFullYear();
+  const monthDiff = today.getMonth() - dob.getMonth();
 
-        showAgeResult(`Age: ${age} years`);
-      }
+  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) {
+    age--;
+  }
+
+  showAgeResult(`Age: ${age} years`);
+}
+
 
       $('#dob_yyyy_b').on('input', function() {
         const day = $('#dob_dd_b').val();
