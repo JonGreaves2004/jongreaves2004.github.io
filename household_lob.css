@@ -282,7 +282,8 @@ input[type=radio]:checked + span:after {
 	display: none;
 }
 
-.input.disabled_field {
+.input.disabled_field,
+.radio_button_option[custom_attribute="disabled"] {
     opacity: .5;
 }
 
