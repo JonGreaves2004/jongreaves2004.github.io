@@ -274,7 +274,10 @@ input[type=radio]:checked + span:after {
 #flooding,
 #holiday_home,
 #unoccupied_prop,
-#unoccupancy_prev_ins {
+#unoccupancy_prev_ins,
+#buildings_cover,
+#buildings_vol_excess,
+#buildings_prev_ins {
 	display: none;
 }
 
