@@ -673,8 +673,11 @@ $('#employment_type').on('change', function() {
 
 
   $('input[custom_attribute="disabled"]').addClass('disabled_field');
-  $('input[custom_attribute="disabled"], select[custom_attribute="disabled"], textarea[custom_attribute="disabled"], button[custom_attribute="disabled"]').attr('disabled', 'disabled');
+  $('input[custom_attribute="disabled"], select[custom_attribute="disabled"], textarea[custom_attribute="disabled"], button[custom_attribute="disabled"], .radio_button_option[custom_attribute="disabled"] input').attr('disabled', 'disabled');
 
+.radio_button_option[custom_attribute="disabled"] inp
+
+	 
 	$('#client_ref').val('THE/B/01011975/0001');
 
 
