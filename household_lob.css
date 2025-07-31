@@ -277,7 +277,8 @@ input[type=radio]:checked + span:after {
 #unoccupancy_prev_ins,
 #buildings_cover,
 #buildings_vol_excess,
-#buildings_prev_ins {
+#buildings_prev_ins,
+#buildings_ncd {
 	display: none;
 }
 
