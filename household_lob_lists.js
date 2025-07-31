@@ -999,6 +999,11 @@ $(document).ready(function () {
     $select.append($('<option>', { value: option.text, text: option.text }));
   });
 
+  var $select = $('#buildings_prev_ins_premium_paid_list');
+  $.each(groupedOptions['prev_ins_premium_paid_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
+
 
 
   
