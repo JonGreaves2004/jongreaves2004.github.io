@@ -677,7 +677,7 @@ $('#employment_type').on('change', function() {
 
   $('div.radio_button_option[custom_attribute="disabled"] input[type="radio"]').attr('disabled', 'disabled');	 
 
-  const $radio = $('.pri_ind_or_comp #1'');
+  const $radio = $('.pri_ind_or_comp #1');
   // Temporarily enable it
   $radio.prop('disabled', false);
   // Check it
