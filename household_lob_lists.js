@@ -989,6 +989,16 @@ $(document).ready(function () {
     $select.append($('<option>', { value: option.text, text: option.text }));
   });
 
+   var $select = $('#buildings_level_of_cover_list');
+  $.each(groupedOptions['contents_level_of_cover_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
+
+  var $select = $('#buildings_vol_excess_list');
+  $.each(groupedOptions['contents_vol_excess_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
+
 
 
   
