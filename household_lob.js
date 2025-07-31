@@ -734,7 +734,7 @@ $('#employment_type').on('change', function() {
 }
 
 
-      $('#dob_yyyy_b').on('input', function() {
+      $('#dob_yyyy_a, #dob_yyyy_b').on('input', function() {
         const day = $('#dob_dd_b').val();
         const month = $('#dob_mm_b').val();
         const year = $('#dob_yyyy_b').val();
