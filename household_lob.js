@@ -717,7 +717,7 @@ $('#employment_type').on('change', function() {
         showAgeResult(`Age: ${age} yrs`);
       }
 
-      $('#dob_yyyy_a, #dob_yyyy_b').on('input', function() {
+      $('#dob_yyyy_b').on('input', function() {
         const day = $('#dob_dd_b').val();
         const month = $('#dob_mm_b').val();
         const year = $('#dob_yyyy_b').val();
@@ -728,14 +728,6 @@ $('#employment_type').on('change', function() {
       });
 
 
-
-
-	$('.hidden_list').each(function() {
-    var divId = $(this).attr('id');
-    if (divId) {
-      $(this).prepend('<span class="visible-id">ID: ' + divId + '</span>');
-    }
-  });
 
   
 });
