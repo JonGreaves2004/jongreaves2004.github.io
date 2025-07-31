@@ -720,7 +720,7 @@ $('#employment_type').on('change', function() {
       $('#dob_yyyy_a, #dob_yyyy_b').on('input', function() {
         const day = $('#dob_dd_b').val();
         const month = $('#dob_mm_b').val();
-        const year = $(this).val();
+        const year = $('#dob_yyyy_b').val();
 
         if (day.length === 2 && month.length === 2 && year.length === 4) {
           calculateAge();
