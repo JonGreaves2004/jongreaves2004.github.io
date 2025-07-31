@@ -308,6 +308,15 @@
     });
 
 
+    $('#buildings_ncd_yn #1').click(function() {
+      $('#buildings_ncd').css('display','block');
+    });
+    $('#buildings_ncd_yn #2').click(function() {
+      $('#buildings_ncd').css('display','none');
+    });	 
+
+
+
     
     $('#prev_ins_name').on('change', function() {
       const selectedValue = $(this).val();
