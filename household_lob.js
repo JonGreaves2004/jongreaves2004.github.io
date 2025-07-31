@@ -695,7 +695,7 @@ $('#employment_type').on('change', function() {
         const currentYear = new Date().getFullYear();
 
         if (!day || !month || !year || year < 1000 || year > currentYear) {
-          showAgeResult("Please enter a valid date.");
+          showAgeResult("Enter a valid date.");
           return;
         }
 
