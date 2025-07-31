@@ -320,7 +320,7 @@
     
     $('#prev_ins_name').on('change', function() {
       const selectedValue = $(this).val();
-      const matchingValues = ['Select one...'];
+      const matchingValues = [''];
 
       if (!matchingValues.includes(selectedValue)) {
         $('#prev_ins').css('display', 'block');
@@ -331,7 +331,7 @@
 	 
     $('#buildings_prev_ins_name').on('change', function() {
       const selectedValue = $(this).val();
-      const matchingValues = ['Select one...'];
+      const matchingValues = [''];
 
       if (!matchingValues.includes(selectedValue)) {
         $('#buildings_prev_ins').css('display', 'block');
