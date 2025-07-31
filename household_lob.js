@@ -293,11 +293,21 @@
       $('#flooding').css('display','block');
     }); 
 
+    $('#buildings_cover_yn #1').click(function() {
+      $('#buildings_cover').css('display','block');
+    });
+    $('#buildings_cover_yn #2').click(function() {
+      $('#buildings_cover').css('display','none');
+    });  
+
+    $('#buildings_vol_excess_yn #1').click(function() {
+      $('#buildings_vol_excess').css('display','none');
+    });
+    $('#buildings_vol_excess_yn #2').click(function() {
+      $('#buildings_vol_excess').css('display','block');
+    });
 
 
-
-	
-    
     
     $('#prev_ins_name').on('change', function() {
       const selectedValue = $(this).val();
@@ -307,6 +317,17 @@
         $('#prev_ins').css('display', 'block');
       } else {
         $('#prev_ins').css('display', 'none');
+      }
+    });
+	 
+    $('#buildings_prev_ins_name').on('change', function() {
+      const selectedValue = $(this).val();
+      const matchingValues = ['Select one...'];
+
+      if (!matchingValues.includes(selectedValue)) {
+        $('#buildings_prev_ins').css('display', 'block');
+      } else {
+        $('#buildings_prev_ins').css('display', 'none');
       }
     });
     
