@@ -677,6 +677,9 @@ $('#employment_type').on('change', function() {
 
   $('div.radio_button_option[custom_attribute="disabled"] input[type="radio"]').attr('disabled', 'disabled');	 
 
+	 $('.pri_ind_or_comp #1').prop('checked', true);
+
+
 
 	 
 	$('#client_ref').val('THE/B/01011975/0001');
