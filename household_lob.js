@@ -408,6 +408,10 @@
       $('#tel_blade').css('display','flex').css('right','0');
     }); 
 	 
+    $('#open_convictions_blade').click(function() {
+      $('#convictions_blade').css('display','flex').css('right','0');
+    }); 
+	 
     $('#open_additional_proposer_blade').click(function() {
       $('#additional_proposer_blade').css('display','flex').css('right','0');
     });
