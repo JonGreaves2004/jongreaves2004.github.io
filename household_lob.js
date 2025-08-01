@@ -463,15 +463,7 @@
     $('#open_cycles_blade').click(function() {
       $('#cycles_blade').css('display','flex').css('right','0');
     });
-	 
-    $('#open_X_blade').click(function() {
-      $('#X_blade').css('display','flex').css('right','0');
-    });
-	 
-    $('#open_X_blade').click(function() {
-      $('#X_blade').css('display','flex').css('right','0');
-    });
-	 
+
     $('#open_int_parties_blade').click(function() {
       $('#int_parties_blade').css('display','flex').css('right','0');
     });
