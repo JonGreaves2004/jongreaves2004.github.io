@@ -201,6 +201,14 @@ input[type=radio]:checked + span:after {
     padding-right: 0;
 }
 
+.blade_content .input.date_input {
+    max-width: 45px;
+}
+
+.blade_content .input.date_input.years_input {
+    max-width: 70px;
+}
+
 .blade_flyout .action_button_wrapper .question_response {
     justify-content: flex-end;
     align-items: flex-end;  
