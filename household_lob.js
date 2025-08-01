@@ -400,10 +400,14 @@
 	
     
     //Open Blades
-    $('#open_tel_blade').click(function() {
+    $('.page_button ').click(function() {
       $('.blade_overlay').css('display','block');
-      $('.blade_flyout').css('display','flex').css('right','0');
     });
+	 
+    $('#open_tel_blade').click(function() {
+      $('#tel_blade').css('display','flex').css('right','0');
+    });
+	 
     $('.close_blade').click(function() {
       $('.blade_overlay').css('display','none');
       $('.blade_flyout').css('right','-575px').css('display','flex');
