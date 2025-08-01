@@ -421,7 +421,11 @@
     });
 	 
     $('#open_marketing_blade').click(function() {
-      $('#dmarketing_blade').css('display','flex').css('right','0');
+      $('#marketing_blade').css('display','flex').css('right','0');
+    });	 
+	 
+    $('#open_contact_blade').click(function() {
+      $('#contact_blade').css('display','flex').css('right','0');
     });	 
 	 
     $('#open_perils_blade').click(function() {
