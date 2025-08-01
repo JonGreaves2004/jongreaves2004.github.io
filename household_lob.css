@@ -28,6 +28,7 @@ input[type=radio], input[type=checkbox] {
     padding: 11px 16px;
     margin-bottom: 0;
     cursor: pointer;
+    position: relative;
 }
 
 .radio_button_option span:after {
@@ -174,6 +175,9 @@ input[type=radio]:checked + span:after {
     z-index: 1002;
     display: flex;
     right: -575px;
+}
+.blade_content {
+    overflow-y: auto;
 }
 .blade_content .question_wrapper {
     flex-direction: column;
