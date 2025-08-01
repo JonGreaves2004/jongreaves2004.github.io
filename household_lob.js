@@ -436,12 +436,12 @@
       $('#trees_blade').css('display','flex').css('right','0');
     });
 	 
-    $('#open_wall_contruction_blade').click(function() {
-      $('#wall_contruction_blade').css('display','flex').css('right','0');
+    $('#open_wall_construction_blade').click(function() {
+      $('#wall_construction_blade').css('display','flex').css('right','0');
     });
 	 
-    $('#open_roof_contruction_blade').click(function() {
-      $('#roof_contruction_blade').css('display','flex').css('right','0');
+    $('#open_roof_construction_blade').click(function() {
+      $('#roof_construction_blade').css('display','flex').css('right','0');
     });
 	 
     $('#open_lodger_blade').click(function() {
