@@ -406,6 +406,66 @@
 	 
     $('#open_tel_blade').click(function() {
       $('#tel_blade').css('display','flex').css('right','0');
+    }); 
+	 
+    $('#open_additional_proposer_blade').click(function() {
+      $('#additional_proposer_blade').css('display','flex').css('right','0');
+    });
+
+    $('#open_data_blade').click(function() {
+      $('#data_blade').css('display','flex').css('right','0');
+    });
+	 
+    $('#open_marketing_blade').click(function() {
+      $('#dmarketing_blade').css('display','flex').css('right','0');
+    });	 
+	 
+    $('#open_perils_blade').click(function() {
+      $('#perils_blade').css('display','flex').css('right','0');
+    });
+	 
+    $('#open_trees_blade').click(function() {
+      $('#trees_blade').css('display','flex').css('right','0');
+    });
+	 
+    $('#open_wall_contruction_blade').click(function() {
+      $('#wall_contruction_blade').css('display','flex').css('right','0');
+    });
+	 
+    $('#open_roof_contruction_blade').click(function() {
+      $('#roof_contruction_blade').css('display','flex').css('right','0');
+    });
+	 
+    $('#open_lodger_blade').click(function() {
+      $('#lodger_blade').css('display','flex').css('right','0');
+    });
+	 
+    $('#open_cooccupant_blade').click(function() {
+      $('#cooccupant_blade').css('display','flex').css('right','0');
+    });
+	 
+    $('#open_spec_item_blade').click(function() {
+      $('#spec_item_blade').css('display','flex').css('right','0');
+    });
+	 
+    $('#open_spec_item_away_blade').click(function() {
+      $('#spec_item_away_blade').css('display','flex').css('right','0');
+    });
+	 
+    $('#open_cycles_blade').click(function() {
+      $('#cycles_blade').css('display','flex').css('right','0');
+    });
+	 
+    $('#open_X_blade').click(function() {
+      $('#X_blade').css('display','flex').css('right','0');
+    });
+	 
+    $('#open_X_blade').click(function() {
+      $('#X_blade').css('display','flex').css('right','0');
+    });
+	 
+    $('#open_int_parties_blade').click(function() {
+      $('#int_parties_blade').css('display','flex').css('right','0');
     });
 	 
     $('.close_blade').click(function() {
