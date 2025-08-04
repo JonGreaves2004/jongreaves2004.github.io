@@ -939,6 +939,79 @@ var groupedOptions = {
     { value: 'council', text: 'Council' },
     { value: 'neighbours', text: 'Neighbours' },
     { value: 'own_property', text: 'Own Property' }
+  ],
+  wall_construction_options: [
+    { value: 'aluminium', text: 'Aluminium' },
+    { value: 'asbestos', text: 'Asbestos' },
+    { value: 'brick', text: 'Brick' },
+    { value: 'bungaroosh', text: 'Bungaroosh' },
+    { value: 'clay-lump/adobe', text: 'Clay-Lump/Adobe' },
+    { value: 'clunch', text: 'Clunch' },
+    { value: 'cob_construction', text: 'Cob Construction' },
+    { value: 'concrete', text: 'Concrete' },
+    { value: 'corrugated_iron', text: 'Corrugated Iron' },
+    { value: 'essex_construction', text: 'Essex Construction' },
+    { value: 'fibreglass_construction', text: 'Fibreglass Construction' },
+    { value: 'flint', text: 'Flint' },
+    { value: 'glass', text: 'Glass' },
+    { value: 'lathe_and_plaster', text: 'Lathe And Plaster' },
+    { value: 'metal', text: 'Metal' },
+    { value: 'mundic_block', text: 'Mundic Block' },
+    { value: 'plastic', text: 'Plastic' },
+    { value: 'prefabricated_building_-_combustible_materials', text: 'Prefabricated Building - Combustible Materials' },
+    { value: 'prefabricated_building_-_non_combustible_materials', text: 'Prefabricated Building - Non Combustible Materials' },
+    { value: 'standard_construction', text: 'Standard Construction' },
+    { value: 'steel_frame', text: 'Steel Frame' },
+    { value: 'steel_frame/brick', text: 'Steel Frame/Brick' },
+    { value: 'steel_frame/render_or_pebbledash', text: 'Steel Frame/Render Or Pebbledash' },
+    { value: 'steel_frame/tile', text: 'Steel Frame/Tile' },
+    { value: 'steel_frame/wood_shiplap', text: 'Steel Frame/Wood Shiplap' },
+    { value: 'stone', text: 'Stone' },
+    { value: 'stramit_construction', text: 'Stramit Construction' },
+    { value: 'straw_bale', text: 'Straw Bale' },
+    { value: 'structurally_insulated_panels_(sips)', text: 'Structurally Insulated Panels (SIPs)' },
+    { value: 'timber', text: 'Timber' },
+    { value: 'timber_frame', text: 'Timber Frame' },
+    { value: 'timber_frame/brick', text: 'Timber Frame/Brick' },
+    { value: 'timber_frame/lathe_and_plaster', text: 'Timber Frame/Lathe And Plaster' },
+    { value: 'timber_frame/stone', text: 'Timber Frame/Stone' },
+    { value: 'timber_frame/timber', text: 'Timber Frame/Timber' },
+    { value: 'timber/plaster', text: 'Timber/Plaster' },
+    { value: 'wattle_and_daub_construction', text: 'Wattle And Daub Construction' },
+    { value: 'woodwall', text: 'Woodwall' },
+    { value: 'woodwork_construction', text: 'Woodwork Construction' },
+    { value: 'zz_-_not_covered_by_any_other_item_on_the_list', text: 'ZZ - Not Covered By Any Other Item On The List' }
+  ],
+  roof_construction_options: [
+    { value: 'aluminium', text: 'Aluminium' },
+    { value: 'asbestos', text: 'Asbestos' },
+    { value: 'asphalt', text: 'Asphalt' },
+    { value: 'concrete', text: 'Concrete' },
+    { value: 'copper', text: 'Copper' },
+    { value: 'corrugated_iron', text: 'Corrugated Iron' },
+    { value: 'ethylene_propylene_diene_monomer_epdm', text: 'Ethylene Propylene Diene Monomer EPDM' },
+    { value: 'felt_on_timber', text: 'Felt On Timber' },
+    { value: 'fibreglass', text: 'Fibreglass' },
+    { value: 'glass', text: 'Glass' },
+    { value: 'green_roofs', text: 'Green Roofs' },
+    { value: 'lead', text: 'Lead' },
+    { value: 'metal', text: 'Metal' },
+    { value: 'plastic', text: 'Plastic' },
+    { value: 'polycarbonate', text: 'Polycarbonate' },
+    { value: 'shingle', text: 'Shingle' },
+    { value: 'shingle_-_asphalt', text: 'Shingle - Asphalt' },
+    { value: 'shingle_-_pine/spruce/cedar', text: 'Shingle - Pine/Spruce/Cedar' },
+    { value: 'slate', text: 'Slate' },
+    { value: 'standard_construction', text: 'Standard Construction' },
+    { value: 'stramit', text: 'Stramit' },
+    { value: 'thatch_-_fibre', text: 'Thatch - Fibre' },
+    { value: 'thatch_-_reed', text: 'Thatch - Reed' },
+    { value: 'tile', text: 'Tile' },
+    { value: 'timber', text: 'Timber' },
+    { value: 'turnerised', text: 'Turnerised' },
+    { value: 'woodwork_construction', text: 'Woodwork Construction' },
+    { value: 'zinc', text: 'Zinc' },
+    { value: 'zz_-_not_covered_by_any_other_item_on_the_list', text: 'ZZ - Not Covered By Any Other Item On The List' }
   ]
 };
 
@@ -1188,6 +1261,20 @@ $(document).ready(function () {
     $select.append($('<option>', { value: option.text, text: option.text }));
   });
 
+  var $select = $('#wall_construction_list');
+  $.each(groupedOptions['wall_construction_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
+
+  var $select = $('#roof_construction_list');
+  $.each(groupedOptions['roof_construction_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
+
+
+
+
+  
   
   
 
@@ -1231,5 +1318,6 @@ $(document).ready(function () {
 
   
 });
+
 
 
