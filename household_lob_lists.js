@@ -1283,7 +1283,12 @@ $(document).ready(function () {
   $.each(groupedOptions['title_options'], function(_, option) {
     $select.append($('<option>', { value: option.value, text: option.text }));
   });
-  
+
+  var $select = $('#co_occupant_title_list');
+  $.each(groupedOptions['title_options'], function(_, option) {
+    $select.append($('<option>', { value: option.value, text: option.text }));
+  });
+
   var $select = $('#pt_employment_type');
   $.each(groupedOptions['employment_types'], function(_, option) {
     $select.append($('<option>', { value: option.value, text: option.text }));
@@ -1318,6 +1323,7 @@ $(document).ready(function () {
 
   
 });
+
 
 
 
