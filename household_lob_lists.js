@@ -856,6 +856,89 @@ var groupedOptions = {
     { value: 'community_service', text: 'Community Service' },
     { value: 'fine', text: 'Fine' },
     { value: 'prison_sentence', text: 'Prison Sentence' }
+  ],
+  peril_type_options: [
+    { value: 'cliff', text: 'Cliff' },
+    { value: 'quarry', text: 'Quarry' },
+    { value: 'watercourse', text: 'Watercourse' }
+  ],
+  tree_status_options: [
+    { value: 'dead', text: 'Dead' },
+    { value: 'live', text: 'Live' },
+    { value: 'removed', text: 'Removed' }
+  ],
+  tree_type_options: [
+    { value: 'acacia_false', text: 'Acacia False' },
+    { value: 'acer', text: 'Acer' },
+    { value: 'alder', text: 'Alder' },
+    { value: 'apple', text: 'Apple' },
+    { value: 'ash', text: 'Ash' },
+    { value: 'bay_laurel', text: 'Bay Laurel' },
+    { value: 'beech', text: 'Beech' },
+    { value: 'birch', text: 'Birch' },
+    { value: 'blackthorn', text: 'Blackthorn' },
+    { value: 'cedar', text: 'Cedar' },
+    { value: 'cherry_(fruiting)', text: 'Cherry (fruiting)' },
+    { value: 'cherry_-_japanese', text: 'Cherry - Japanese' },
+    { value: 'cherry_-_laurel', text: 'Cherry - Laurel' },
+    { value: 'cherry_-_wild', text: 'Cherry - Wild' },
+    { value: 'conifer', text: 'Conifer' },
+    { value: 'cypress_-_lawsons', text: 'Cypress - Lawsons' },
+    { value: 'cypress_-_leyland_(leylandii)', text: 'Cypress - Leyland (Leylandii)' },
+    { value: 'cypress_-_monterey', text: 'Cypress - Monterey' },
+    { value: 'damson', text: 'Damson' },
+    { value: 'douglas_fir', text: 'Douglas Fir' },
+    { value: 'elm_-_english', text: 'Elm - English' },
+    { value: 'elm_-_wheatley', text: 'Elm - Wheatley' },
+    { value: 'elm_-_wych', text: 'Elm - Wych' },
+    { value: 'eucalyptus', text: 'Eucalyptus' },
+    { value: 'fir', text: 'Fir' },
+    { value: 'hawthorn', text: 'Hawthorn' },
+    { value: 'hazel', text: 'Hazel' },
+    { value: 'holly', text: 'Holly' },
+    { value: 'honey_locust', text: 'Honey Locust' },
+    { value: 'hornbeam', text: 'Hornbeam' },
+    { value: 'horse_chestnut', text: 'Horse Chestnut' },
+    { value: 'laburnum', text: 'Laburnum' },
+    { value: 'laurel', text: 'Laurel' },
+    { value: 'lime', text: 'Lime' },
+    { value: 'magnolia', text: 'Magnolia' },
+    { value: 'maple_-_chinese', text: 'Maple - Chinese' },
+    { value: 'maple_-_japanese', text: 'Maple - Japanese' },
+    { value: 'maple_-_norway', text: 'Maple - Norway' },
+    { value: 'monkey_puzzle', text: 'Monkey Puzzle' },
+    { value: 'mountain_ash', text: 'Mountain Ash' },
+    { value: 'mulberry', text: 'Mulberry' },
+    { value: 'oak_-_english', text: 'Oak - English' },
+    { value: 'oak_-_red', text: 'Oak - Red' },
+    { value: 'oak_-_turkey', text: 'Oak - Turkey' },
+    { value: 'oak___holm', text: 'Oak _ Holm' },
+    { value: 'olive', text: 'Olive' },
+    { value: 'other', text: 'Other' },
+    { value: 'palm', text: 'Palm' },
+    { value: 'pear', text: 'Pear' },
+    { value: 'pine', text: 'Pine' },
+    { value: 'plane', text: 'Plane' },
+    { value: 'plum', text: 'Plum' },
+    { value: 'poplar_-_hybrid_black', text: 'Poplar - Hybrid Black' },
+    { value: 'poplar_-_lombardy', text: 'Poplar - Lombardy' },
+    { value: 'rowan', text: 'Rowan' },
+    { value: 'spruce', text: 'Spruce' },
+    { value: 'sycamore', text: 'Sycamore' },
+    { value: 'tree_of_heaven', text: 'Tree of Heaven' },
+    { value: 'walnut', text: 'Walnut' },
+    { value: 'wellingtonia', text: 'Wellingtonia' },
+    { value: 'white_beam', text: 'White Beam' },
+    { value: 'willow_-_crack', text: 'Willow - Crack' },
+    { value: 'willow_-_weeping', text: 'Willow - Weeping' },
+    { value: 'willow_-_white', text: 'Willow - White' },
+    { value: 'yew', text: 'Yew' }
+  ],
+  tree_land_loptions: [
+    { value: 'common_land', text: 'Common Land' },
+    { value: 'council', text: 'Council' },
+    { value: 'neighbours', text: 'Neighbours' },
+    { value: 'own_property', text: 'Own Property' }
   ]
 };
 
@@ -1085,6 +1168,26 @@ $(document).ready(function () {
     $select.append($('<option>', { value: option.text, text: option.text }));
   });
 
+  var $select = $('#peril_type_list');
+  $.each(groupedOptions['peril_type_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
+
+  var $select = $('#tree_status_list');
+  $.each(groupedOptions['tree_status_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
+
+  var $select = $('#tree_type_list');
+  $.each(groupedOptions['tree_type_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
+
+  var $select = $('#tree_land_list');
+  $.each(groupedOptions['tree_land_loptions'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
+
   
   
 
@@ -1128,4 +1231,5 @@ $(document).ready(function () {
 
   
 });
+
 
