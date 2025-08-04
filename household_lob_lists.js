@@ -748,6 +748,114 @@ var groupedOptions = {
     { value: 'stand_alone', text: 'Stand Alone' },
     { value: 'under_floor', text: 'Under Floor' },
     { value: 'wall', text: 'Wall' }
+  ],
+  conv_types_options: [
+    { value: 'absconding', text: 'Absconding' },
+    { value: 'abusive_words_or_behaviour', text: 'Abusive Words Or Behaviour' },
+    { value: 'actual_bodily_harm_(abh)', text: 'Actual Bodily Harm (ABH)' },
+    { value: 'administering_noxious_substances_to_commit_sexual_act', text: 'Administering Noxious Substances To Commit Sexual Act' },
+    { value: 'affray', text: 'Affray' },
+    { value: 'aggravated_vehicle_taking', text: 'Aggravated Vehicle Taking' },
+    { value: 'air_gun_in_a_public_place', text: 'Air Gun In A Public Place' },
+    { value: 'animals_(cruelty_to)', text: 'Animals (Cruelty To)' },
+    { value: 'anti_social_behaviour_order_-_breach', text: 'Anti Social Behaviour Order - Breach' },
+    { value: 'any_criminal_injury_related', text: 'Any Criminal Injury Related' },
+    { value: 'arson', text: 'Arson' },
+    { value: 'arson_-_with_intent_to_endanger_life', text: 'Arson - With Intent To Endanger Life' },
+    { value: 'article_with_blade_or_point_in_a_public_place', text: 'Article With Blade Or Point In A Public Place' },
+    { value: 'assaulting_a_police_officer', text: 'Assaulting A Police Officer' },
+    { value: 'avoiding_customs_duty', text: 'Avoiding Customs Duty' },
+    { value: 'battery', text: 'Battery' },
+    { value: 'black_mail', text: 'Black Mail' },
+    { value: 'bomb_hoax', text: 'Bomb Hoax' },
+    { value: 'breach_of_consumer_credit_legislation', text: 'Breach Of Consumer Credit Legislation' },
+    { value: 'breach_of_consumer_protection_legislation', text: 'Breach Of Consumer Protection Legislation' },
+    { value: 'breach_of_environmental_legislation', text: 'Breach Of Environmental Legislation' },
+    { value: 'breach_of_factories_act', text: 'Breach Of Factories Act' },
+    { value: 'breach_of_health_and_safety_legislation', text: 'Breach Of Health And Safety Legislation' },
+    { value: 'breach_of_quality_or_safety_of_goods_legislation', text: 'Breach Of Quality Or Safety Of Goods Legislation' },
+    { value: 'breach_of_the_peace', text: 'Breach Of The Peace' },
+    { value: 'burglary', text: 'Burglary' },
+    { value: 'burglary_-_aggravated', text: 'Burglary - Aggravated' },
+    { value: 'burglary_-_going_equipped', text: 'Burglary - Going Equipped' },
+    { value: 'children_-_cruelty', text: 'Children - Cruelty' },
+    { value: 'common_assault', text: 'Common Assault' },
+    { value: 'computer_-modifying_equipment_without_authorisation', text: 'Computer -Modifying Equipment Without Authorisation' },
+    { value: 'conspiracy_to_defraud', text: 'Conspiracy To Defraud' },
+    { value: 'conspiracy_to_import/_export_drugs', text: 'Conspiracy To Import/ Export Drugs' },
+    { value: 'conspiracy_to_steal', text: 'Conspiracy To Steal' },
+    { value: 'contempt_of_court', text: 'Contempt Of Court' },
+    { value: 'criminal_damage', text: 'Criminal Damage' },
+    { value: 'culpable_&amp;_reckless_conduct', text: 'Culpable &amp; Reckless Conduct' },
+    { value: 'cultivating_cannabis', text: 'Cultivating Cannabis' },
+    { value: 'death_by_dangerous_/reckless_driving', text: 'Death By Dangerous /Reckless Driving' },
+    { value: 'deception', text: 'Deception' },
+    { value: 'dishonesty_related', text: 'Dishonesty Related' },
+    { value: 'domestic_assault', text: 'Domestic Assault' },
+    { value: 'drug_related', text: 'Drug Related' },
+    { value: 'drunk_&amp;_disorderly', text: 'Drunk &amp; Disorderly' },
+    { value: 'dss_offences', text: 'DSS Offences' },
+    { value: 'escape_from_prison/custody', text: 'Escape From Prison/Custody' },
+    { value: 'false_accounting', text: 'False Accounting' },
+    { value: 'forgery', text: 'Forgery' },
+    { value: 'fraud', text: 'Fraud' },
+    { value: 'fraud_-_insurance', text: 'Fraud - Insurance' },
+    { value: 'grievous_bodily_harm_(gbh)', text: 'Grievous Bodily Harm (GBH)' },
+    { value: 'grievous_bodily_harm_with_intent_to_harm', text: 'Grievous Bodily Harm With Intent To Harm' },
+    { value: 'gross_indecency', text: 'Gross Indecency' },
+    { value: 'handling_stolen_goods', text: 'Handling Stolen Goods' },
+    { value: 'harassment', text: 'Harassment' },
+    { value: 'harbouring_an_escaped_criminal', text: 'Harbouring An Escaped Criminal' },
+    { value: 'illegal_importation_of_immigrants', text: 'Illegal Importation Of Immigrants' },
+    { value: 'images_of_a_minor_from_the_internet_-downloading', text: 'Images Of a Minor From The Internet -Downloading' },
+    { value: 'images_of_a_minor_on_the_internet_viewing', text: 'Images Of a Minor On The Internet Viewing' },
+    { value: 'import/export_drugs', text: 'Import/Export Drugs' },
+    { value: 'incest_involving_a_child', text: 'Incest Involving A Child' },
+    { value: 'incitement_to_racial_hatred', text: 'Incitement To Racial Hatred' },
+    { value: 'indecent_assault', text: 'Indecent Assault' },
+    { value: 'indecent_assault_on_a_minor', text: 'Indecent Assault On A Minor' },
+    { value: 'indecent_exposure', text: 'Indecent Exposure' },
+    { value: 'insider_trading', text: 'Insider Trading' },
+    { value: 'kerb_crawling', text: 'Kerb Crawling' },
+    { value: 'kidnapping', text: 'Kidnapping' },
+    { value: 'living_on_immoral_earnings', text: 'Living On Immoral Earnings' },
+    { value: 'manslaughter', text: 'Manslaughter' },
+    { value: 'motoring_offence', text: 'Motoring Offence' },
+    { value: 'murder', text: 'Murder' },
+    { value: 'murder_-threat_to', text: 'Murder -Threat To' },
+    { value: 'obstructing_a_police_officer', text: 'Obstructing A Police Officer' },
+    { value: 'perjury', text: 'Perjury' },
+    { value: 'perverting_the_course_of_justice', text: 'Perverting The Course Of Justice' },
+    { value: 'possession_of_a_class_‘a’_drug', text: 'Possession Of a Class ‘A’ Drug' },
+    { value: 'possession_of_a_class_‘b’_drug', text: 'Possession Of a Class ‘B’ Drug' },
+    { value: 'possession_of_a_class_‘c’_drug', text: 'Possession Of a Class ‘C’ Drug' },
+    { value: 'possession_of_an_offensive_weapon', text: 'Possession Of An Offensive Weapon' },
+    { value: 'possession_of_firearms/_explosive', text: 'Possession Of Firearms/ Explosive' },
+    { value: 'possession_with_intent_to_supply_a_class_‘a’_drug', text: 'Possession With Intent To Supply a Class ‘A’ Drug' },
+    { value: 'possession_with_intent_to_supply_a_class_‘b’_drug', text: 'Possession With Intent To Supply a Class ‘B’ Drug' },
+    { value: 'possession_with_intent_to_supply_a_class_‘c’_drug', text: 'Possession With Intent To Supply a Class ‘C’ Drug' },
+    { value: 'procuring_the_services_of_a_prostitute', text: 'Procuring The Services Of A Prostitute' },
+    { value: 'prostitution', text: 'Prostitution' },
+    { value: 'rape', text: 'Rape' },
+    { value: 'receiving_stolen_goods', text: 'Receiving Stolen Goods' },
+    { value: 'robbery', text: 'Robbery' },
+    { value: 'robbery_-_armed', text: 'Robbery - Armed' },
+    { value: 'shoplifting', text: 'Shoplifting' },
+    { value: 'terrorism', text: 'Terrorism' },
+    { value: 'theft', text: 'Theft' },
+    { value: 'theft_from_employer', text: 'Theft From Employer' },
+    { value: 'threatening_behaviour', text: 'Threatening Behaviour' },
+    { value: 'trespassing', text: 'Trespassing' },
+    { value: 'voyeurism', text: 'Voyeurism' },
+    { value: 'wounding', text: 'Wounding' },
+    { value: 'wounding_a_police_officer', text: 'Wounding A Police Officer' },
+    { value: 'wounding_with_intent', text: 'Wounding With Intent' },
+    { value: 'zz_-_not_covered_by_any_other_item_on_the_list', text: 'ZZ - Not Covered By Any Other Item On The List' }
+  ],
+  conv_sentence_options: [
+    { value: 'community_service', text: 'Community Service' },
+    { value: 'fine', text: 'Fine' },
+    { value: 'prison_sentence', text: 'Prison Sentence' }
   ]
 };
 
@@ -966,6 +1074,18 @@ $(document).ready(function () {
   $.each(groupedOptions['safe_type_options'], function(_, option) {
     $select.append($('<option>', { value: option.text, text: option.text }));
   });
+
+  var $select = $('#conv_types_list');
+  $.each(groupedOptions['conv_types_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
+
+  var $select = $('#conv_sentence_list');
+  $.each(groupedOptions['conv_sentence_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
+
+  
   
 
   // Options reuse for other lists....
@@ -1008,3 +1128,4 @@ $(document).ready(function () {
 
   
 });
+
