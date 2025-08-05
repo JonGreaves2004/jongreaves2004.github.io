@@ -1176,6 +1176,51 @@ var groupedOptions = {
     { value: 'wheelchairs_-_self_propelled', text: 'Wheelchairs - Self Propelled' },
     { value: 'works_of_art_etc.', text: 'Works Of Art Etc.' },
     { value: 'zz_-_not_covered_by_any_other_item_on_the_list', text: 'ZZ - Not Covered By Any Other Item On The List' }
+  ],
+  spec_away_item_kept_options: [
+    { value: 'bank_safe_deposit', text: 'Bank Safe Deposit' },
+    { value: 'gun_club', text: 'Gun Club' },
+    { value: 'in_basement', text: 'In Basement' },
+    { value: 'in_outbuilding', text: 'In Outbuilding' },
+    { value: 'in_safe', text: 'In Safe' },
+    { value: 'in_unattended_vehicle', text: 'In Unattended Vehicle' },
+    { value: 'local_to_business_address_only', text: 'Local To Business Address Only' },
+    { value: 'locked_premises', text: 'Locked Premises' },
+    { value: 'locked_vehicle', text: 'Locked Vehicle' },
+    { value: 'no_code_available', text: 'No Code Available' },
+    { value: 'on_person_(continuously_worn)', text: 'On Person (Continuously Worn)' },
+    { value: 'on_premises', text: 'On Premises' }
+  ],
+  geo_limit_options: [
+    { value: 'asia', text: 'Asia' },
+    { value: 'australia,_new_zealand', text: 'Australia, New Zealand' },
+    { value: 'australia,_nz,_usa_and_canada', text: 'Australia, NZ, USA and Canada' },
+    { value: 'channel_islands', text: 'Channel Islands' },
+    { value: 'eu', text: 'EU' },
+    { value: 'eu_plus', text: 'EU Plus' },
+    { value: 'europe', text: 'Europe' },
+    { value: 'europe_(exc_uk)', text: 'Europe (exc UK)' },
+    { value: 'gb_ni_i_of_m_ch_is.', text: 'GB NI I Of M Ch Is.' },
+    { value: 'gb_ni_i_of_m_ch_is._eu_plus', text: 'GB NI I Of M Ch Is. EU Plus' },
+    { value: 'great_britain', text: 'Great Britain' },
+    { value: 'international', text: 'International' },
+    { value: 'isle_of_man', text: 'Isle Of Man' },
+    { value: 'middle_east', text: 'Middle East' },
+    { value: 'n._ireland', text: 'N. Ireland' },
+    { value: 'no_code_available', text: 'No Code Available' },
+    { value: 'north_america', text: 'North America' },
+    { value: 'outside_country_of_residence', text: 'Outside Country of Residence' },
+    { value: 'outside_european_union', text: 'Outside European Union' },
+    { value: 'outside_uk', text: 'Outside UK' },
+    { value: 'u.k.', text: 'U.K.' },
+    { value: 'uk_&amp;_republic_of_ireland', text: 'UK &amp; Republic of Ireland' },
+    { value: 'urban_areas', text: 'Urban Areas' },
+    { value: 'usa_&amp;_canada', text: 'USA &amp; Canada' },
+    { value: 'western_europe', text: 'Western Europe' },
+    { value: 'worldwide', text: 'Worldwide' },
+    { value: 'worldwide_excluding_canada', text: 'Worldwide Excluding Canada' },
+    { value: 'worldwide_excluding_usa', text: 'Worldwide Excluding USA' },
+    { value: 'worldwide_excluding_usa_&amp;_canada', text: 'Worldwide Excluding USA &amp; Canada' }
   ]
 };
 
@@ -1440,7 +1485,15 @@ $(document).ready(function () {
     $select.append($('<option>', { value: option.text, text: option.text }));
   });
 
+  var $select = $('#spec_away_item_kept_list');
+  $.each(groupedOptions['spec_away_item_kept_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
 
+  var $select = $('#geo_limit_list');
+  $.each(groupedOptions['geo_limit_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
 
   
   
@@ -1499,6 +1552,7 @@ $(document).ready(function () {
 
   
 });
+
 
 
 
