@@ -291,7 +291,8 @@ input[type=radio]:checked + span:after {
 #buildings_vol_excess,
 #buildings_prev_ins,
 #buildings_ncd,
-#collection {
+#collection,
+#away_collection {
 	display: none;
 }
 
@@ -315,4 +316,5 @@ span.visible-id {
     font-weight: 600;
     font-size: 16px;
 }
+
 
