@@ -1536,6 +1536,14 @@ var groupedOptions = {
     { value: 'zaire', text: 'Zaire' },
     { value: 'zambia', text: 'Zambia' },
     { value: 'zimbabwe', text: 'Zimbabwe' }
+  ],
+  what_was_reason_options: [
+    { value: 'landslide', text: 'Landslide' },
+    { value: 'mine_collapse', text: 'Mine collapse' },
+    { value: 'other', text: 'Other' },
+    { value: 'shrinkage_of_the_soil_caused_by_trees/vegetation', text: 'Shrinkage of the soil caused by trees/vegetation' },
+    { value: 'sinkhole_opening', text: 'Sinkhole opening' },
+    { value: 'water_leaking_from_underground_pipes/drains', text: 'Water leaking from underground pipes/drains' }
   ]
 };
 
@@ -1834,6 +1842,11 @@ $(document).ready(function () {
   $.each(groupedOptions['int_party_country_options'], function(_, option) {
     $select.append($('<option>', { value: option.text, text: option.text }));
   });
+
+  var $select = $('#what_was_reason_list');
+  $.each(groupedOptions['what_was_reason_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
   
   
   
@@ -1904,8 +1917,14 @@ $(document).ready(function () {
     $select.append($('<option>', { value: option.text, text: option.text }));
   });
 
+  var $select = $('#who_was_affected_list');
+  $.each(groupedOptions['who_affected_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
+
   
 });
+
 
 
 
