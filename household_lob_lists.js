@@ -786,14 +786,14 @@ var groupedOptions = {
     { value: 'conspiracy_to_steal', text: 'Conspiracy To Steal' },
     { value: 'contempt_of_court', text: 'Contempt Of Court' },
     { value: 'criminal_damage', text: 'Criminal Damage' },
-    { value: 'culpable_&amp;_reckless_conduct', text: 'Culpable &amp; Reckless Conduct' },
+    { value: 'culpable_&_reckless_conduct', text: 'Culpable & Reckless Conduct' },
     { value: 'cultivating_cannabis', text: 'Cultivating Cannabis' },
     { value: 'death_by_dangerous_/reckless_driving', text: 'Death By Dangerous /Reckless Driving' },
     { value: 'deception', text: 'Deception' },
     { value: 'dishonesty_related', text: 'Dishonesty Related' },
     { value: 'domestic_assault', text: 'Domestic Assault' },
     { value: 'drug_related', text: 'Drug Related' },
-    { value: 'drunk_&amp;_disorderly', text: 'Drunk &amp; Disorderly' },
+    { value: 'drunk_&_disorderly', text: 'Drunk & Disorderly' },
     { value: 'dss_offences', text: 'DSS Offences' },
     { value: 'escape_from_prison/custody', text: 'Escape From Prison/Custody' },
     { value: 'false_accounting', text: 'False Accounting' },
@@ -1014,11 +1014,11 @@ var groupedOptions = {
     { value: 'zz_-_not_covered_by_any_other_item_on_the_list', text: 'ZZ - Not Covered By Any Other Item On The List' }
   ],
   spec_item_type_options: [
-    { value: 'accident_&amp;_sickness_cover', text: 'Accident &amp; Sickness Cover' },
+    { value: 'accident_&_sickness_cover', text: 'Accident & Sickness Cover' },
     { value: 'accident_cover', text: 'Accident Cover' },
-    { value: 'accident,_sickness_&amp;_life_cover', text: 'Accident, Sickness &amp; Life Cover' },
-    { value: 'accident,_sickness_&amp;_unemployment_cover', text: 'Accident, Sickness &amp; Unemployment Cover' },
-    { value: 'accident,_sickness,_unemployment_&amp;_life_cover', text: 'Accident, Sickness, Unemployment &amp; Life Cover' },
+    { value: 'accident,_sickness_&_life_cover', text: 'Accident, Sickness & Life Cover' },
+    { value: 'accident,_sickness_&_unemployment_cover', text: 'Accident, Sickness & Unemployment Cover' },
+    { value: 'accident,_sickness,_unemployment_&_life_cover', text: 'Accident, Sickness, Unemployment & Life Cover' },
     { value: 'aerials_(less_than_60_feet_high)', text: 'Aerials (Less Than 60 Feet High)' },
     { value: 'aerials_(over_60_feet_high)', text: 'Aerials (Over 60 Feet High)' },
     { value: 'all_risk_cover', text: 'All Risk Cover' },
@@ -1213,14 +1213,14 @@ var groupedOptions = {
     { value: 'outside_european_union', text: 'Outside European Union' },
     { value: 'outside_uk', text: 'Outside UK' },
     { value: 'u.k.', text: 'U.K.' },
-    { value: 'uk_&amp;_republic_of_ireland', text: 'UK &amp; Republic of Ireland' },
+    { value: 'uk_&_republic_of_ireland', text: 'UK & Republic of Ireland' },
     { value: 'urban_areas', text: 'Urban Areas' },
-    { value: 'usa_&amp;_canada', text: 'USA &amp; Canada' },
+    { value: 'usa_&_canada', text: 'USA & Canada' },
     { value: 'western_europe', text: 'Western Europe' },
     { value: 'worldwide', text: 'Worldwide' },
     { value: 'worldwide_excluding_canada', text: 'Worldwide Excluding Canada' },
     { value: 'worldwide_excluding_usa', text: 'Worldwide Excluding USA' },
-    { value: 'worldwide_excluding_usa_&amp;_canada', text: 'Worldwide Excluding USA &amp; Canada' }
+    { value: 'worldwide_excluding_usa_&_canada', text: 'Worldwide Excluding USA & Canada' }
   ],
   pedal_security_options: [
     { value: 'anti-lift_device', text: 'Anti-Lift Device' },
@@ -1492,7 +1492,7 @@ var groupedOptions = {
     { value: 'solomon_islands', text: 'Solomon Islands' },
     { value: 'somalia', text: 'Somalia' },
     { value: 'south_africa', text: 'South Africa' },
-    { value: 'south_georgia_&amp;_the_south_sandwich_islands', text: 'South Georgia &amp; the South Sandwich Islands' },
+    { value: 'south_georgia_&_the_south_sandwich_islands', text: 'South Georgia & the South Sandwich Islands' },
     { value: 'spain', text: 'Spain' },
     { value: 'sri_lanka', text: 'Sri Lanka' },
     { value: 'sudan', text: 'Sudan' },
@@ -1906,6 +1906,7 @@ $(document).ready(function () {
 
   
 });
+
 
 
 
