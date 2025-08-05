@@ -1221,6 +1221,41 @@ var groupedOptions = {
     { value: 'worldwide_excluding_canada', text: 'Worldwide Excluding Canada' },
     { value: 'worldwide_excluding_usa', text: 'Worldwide Excluding USA' },
     { value: 'worldwide_excluding_usa_&amp;_canada', text: 'Worldwide Excluding USA &amp; Canada' }
+  ],
+  pedal_security_options: [
+    { value: 'anti-lift_device', text: 'Anti-Lift Device' },
+    { value: 'cable_lock_devices', text: 'Cable Lock Devices' },
+    { value: 'close_shackle_padlock_-_5_or_more_levers', text: 'Close Shackle Padlock - 5 Or More Levers' },
+    { value: 'hitchlock', text: 'Hitchlock' },
+    { value: 'locking_bar', text: 'Locking Bar' },
+    { value: 'none', text: 'None' },
+    { value: 'other', text: 'Other' },
+    { value: 'security_lock', text: 'Security Lock' },
+    { value: 'security_marking', text: 'Security Marking' },
+    { value: 'wheel_clamp', text: 'Wheel Clamp' }
+  ],
+  pedal_kept_options: [
+    { value: 'car_park', text: 'Car Park' },
+    { value: 'carport', text: 'Carport' },
+    { value: 'garaged', text: 'Garaged' },
+    { value: 'kept_on_private_property', text: 'Kept On Private Property' },
+    { value: 'kept_on_public_road', text: 'Kept On Public Road' },
+    { value: 'kept_on_third_party_premises', text: 'Kept on Third Party Premises' },
+    { value: 'locked_building', text: 'Locked Building' },
+    { value: 'locked_compound', text: 'Locked Compound' },
+    { value: 'parked_on_drive', text: 'Parked On Drive' },
+    { value: 'shed', text: 'Shed' },
+    { value: 'unlocked_building', text: 'Unlocked Building' },
+    { value: 'unlocked_building', text: 'Unlocked Building' },
+    { value: 'unlocked_compound', text: 'Unlocked Compound' },
+    { value: 'unlocked_compound', text: 'Unlocked Compound' }
+  ],
+  pedal_type_options: [
+    { value: 'mountain_bike', text: 'Mountain Bike' },
+    { value: 'pedal_cycles', text: 'Pedal Cycles' },
+    { value: 'racing_bike', text: 'Racing Bike' },
+    { value: 'tandem_bike', text: 'Tandem Bike' },
+    { value: 'touring_bike', text: 'Touring Bike' }
   ]
 };
 
@@ -1494,7 +1529,21 @@ $(document).ready(function () {
   $.each(groupedOptions['geo_limit_options'], function(_, option) {
     $select.append($('<option>', { value: option.text, text: option.text }));
   });
+  
+  var $select = $('#pedal_security_list');
+  $.each(groupedOptions['pedal_security_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
 
+  var $select = $('#pedal_kept_list');
+  $.each(groupedOptions['pedal_kept_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
+
+  var $select = $('#pedal_type_list');
+  $.each(groupedOptions['pedal_type_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
   
   
   
@@ -1560,8 +1609,14 @@ $(document).ready(function () {
     $select.append($('<option>', { value: option.value, text: option.text }));
   });
 
+  var $select = $('#pedal_geo_limit_list');
+  $.each(groupedOptions['geo_limit_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
+
   
 });
+
 
 
 
