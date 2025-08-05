@@ -315,6 +315,13 @@
       $('#buildings_ncd').css('display','none');
     });	 
 
+    $('#collection_yn #1').click(function() {
+      $('#collection').css('display','block');
+    });
+    $('#collection_yn #2').click(function() {
+      $('#collection').css('display','none');
+    });	 
+
 
 
     
@@ -818,4 +825,5 @@ $('#employment_type').on('change', function() {
 
   
 });
+
 
