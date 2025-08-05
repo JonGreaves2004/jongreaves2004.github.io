@@ -1340,7 +1340,7 @@ var groupedOptions = {
     { value: 'congo', text: 'Congo' },
     { value: 'cook_islands', text: 'Cook Islands' },
     { value: 'costa_rica', text: 'Costa Rica' },
-    { value: 'cote_d'ivoire', text: 'Cote D'ivoire' },
+    { value: 'cote_d`ivoire', text: 'Cote D`ivoire' },
     { value: 'croatia', text: 'Croatia' },
     { value: 'cuba', text: 'Cuba' },
     { value: 'curacao', text: 'Curacao' },
@@ -1906,6 +1906,7 @@ $(document).ready(function () {
 
   
 });
+
 
 
 
