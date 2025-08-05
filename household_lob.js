@@ -477,9 +477,10 @@
       $('#cycles_blade').css('display','flex').css('right','0');
     });
 
-    $('#open_int_parties_blade').click(function() {
-      $('#int_parties_blade').css('display','flex').css('right','0');
+    $('#open_int_party_blade').click(function() {
+      $('#int_party_blade').css('display','flex').css('right','0');
     });
+
 	 
     $('.close_blade').click(function() {
       $('.blade_overlay').css('display','none');
@@ -831,6 +832,7 @@ $('#employment_type').on('change', function() {
 
   
 });
+
 
 
 
