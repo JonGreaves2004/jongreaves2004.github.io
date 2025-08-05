@@ -1545,6 +1545,16 @@ $(document).ready(function () {
     $select.append($('<option>', { value: option.text, text: option.text }));
   });
 
+  var $select = $('#spec_away_item_vol_excess_list');
+  $.each(groupedOptions['contents_vol_excess_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
+
+  var $select = $('#spec_away_item_type_list');
+  $.each(groupedOptions['spec_item_type_options'], function(_, option) {
+    $select.append($('<option>', { value: option.text, text: option.text }));
+  });
+  
   var $select = $('#spec_item_kept_list');
   $.each(groupedOptions['items_kept_options'], function(_, option) {
     $select.append($('<option>', { value: option.value, text: option.text }));
@@ -1552,6 +1562,7 @@ $(document).ready(function () {
 
   
 });
+
 
 
 
