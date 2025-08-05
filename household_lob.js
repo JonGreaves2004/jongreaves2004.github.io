@@ -322,6 +322,12 @@
       $('#collection').css('display','none');
     });	 
 
+    $('#away_collection_yn #1').click(function() {
+      $('#away_collection').css('display','block');
+    });
+    $('#away_collection_yn #2').click(function() {
+      $('#away_collection').css('display','none');
+    });	
 
 
     
@@ -825,5 +831,6 @@ $('#employment_type').on('change', function() {
 
   
 });
+
 
 
