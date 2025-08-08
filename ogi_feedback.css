@@ -1,0 +1,72 @@
+
+@import url("https://use.typekit.net/ufm3jgn.css");
+
+.form-all {
+    font-family : "proxima-soft";
+}
+
+.form-header-group.header-large {
+    background-color : #241860;
+    border-radius : 8px 8px 0 0;
+}
+
+.form-header-group .form-header,
+.form-header,
+.form-subHeader,
+.form-header-group .form-subHeader {
+    color : #ffffff;
+}
+
+.form-section:first-child {
+    border-radius : 8px 8px 0 0;
+}
+
+.supernova .form-all, .form-all {
+    border-radius : 8px;
+}
+
+.form-pagebreak {
+    border-color : #cfd4ed;
+}
+
+.form-all {
+    max-width : 650px;
+    width : 94%;
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+    html.supernova.isEmbeded .form-all {
+        margin : 20px auto 40px;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    ul.form-section {
+        padding : 0 14px;
+    }
+
+}
+
+.form-header-group[data-imagealign] {
+    align-items: start;
+}
+
+div.form-header-group.header-large, div.form-header-group.hasImage {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.form-pagebreak-next,
+.submit-button {
+    background-color: #0F40C5;
+    border-color: #0F40C5;
+    color: #fff;
+    font-family : "proxima-soft";
+    border-radius: 8px;
+}
+
+.submit-button {
+      background-color: #18bd5b;
+    border-color: #18bd5b;
+}
